@@ -1,0 +1,297 @@
+<!doctype html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Weather Forecast",
+  "schemaVersion": 1,
+  "description": "Weather-only 3-day forecast for Woodinville home base + fishing/hunting spots (Cle Elum, North Bend, Skykomish, Calder, Blue Ridge). Per-day outdoor read. Refreshed daily 6am PT. River CFS/temps live in the river-flows artifact."
+}
+</script>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Weather Forecast</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0f1115;
+    color: #e6e8eb;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  header { margin-bottom: 20px; }
+  h1 { font-size: 22px; margin: 0 0 4px; font-weight: 700; color: #f4f6f8; }
+  .sub { color: #8a929b; font-size: 13px; }
+  h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #8a929b;
+    margin: 26px 0 10px;
+    font-weight: 600;
+  }
+  .lead {
+    background: #161922;
+    border: 1px solid #262a33;
+    border-left: 4px solid #00bcd4;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #d4d9e0;
+  }
+  .lead strong { color: #f4f6f8; }
+  .card {
+    background: #181b22;
+    border: 1px solid #262a33;
+    border-left: 4px solid #4a4f59;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .card.home {
+    border-left-color: #00bcd4;
+    background: linear-gradient(180deg, rgba(0,188,212,0.06), #181b22 60%);
+    border-top: 1px solid rgba(0,188,212,0.25);
+    border-right: 1px solid rgba(0,188,212,0.15);
+  }
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .loc-name { font-weight: 700; font-size: 16px; color: #f4f6f8; }
+  .card.home .loc-name { color: #ffffff; }
+  .loc-sub { font-size: 11.5px; color: #8a929b; margin-top: 2px; }
+  .badge {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .badge.home { background: rgba(0,188,212,0.18); color: #4dd0e1; }
+  .badge.go { background: rgba(76,175,106,0.18); color: #6fd485; }
+  .badge.mixed { background: rgba(212,161,58,0.18); color: #e4b961; }
+  .badge.no { background: rgba(226,92,92,0.18); color: #ef8484; }
+  .forecast-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .fc {
+    background: #11141b;
+    border-radius: 6px;
+    padding: 10px 6px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .card.home .fc {
+    background: rgba(0,188,212,0.07);
+    border: 1px solid rgba(0,188,212,0.15);
+  }
+  .fc .day { color: #8a929b; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .fc .hi { color: #f4f6f8; font-weight: 700; font-size: 18px; margin-top: 4px; }
+  .fc .lo { color: #6b7079; font-weight: 500; font-size: 14px; }
+  .fc .cond { color: #b8bec6; font-size: 11px; margin-top: 4px; line-height: 1.3; }
+  .fc .precip { color: #5a9eef; font-size: 10.5px; margin-top: 2px; }
+  .read { font-size: 13.5px; color: #c8ced5; }
+  .read p { margin: 0 0 6px; }
+  .read .label {
+    display: inline-block;
+    color: #8a929b;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    min-width: 56px;
+  }
+  .card.home .read { color: #dde2e8; }
+  .card.home .read .label { color: #4dd0e1; }
+  details {
+    background: #181b22;
+    border: 1px solid #262a33;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  details summary {
+    cursor: pointer;
+    padding: 12px 16px;
+    font-size: 13.5px;
+    color: #b8bec6;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before { content: "+"; color: #6b7079; font-weight: 700; width: 12px; }
+  details[open] summary::before { content: "-"; }
+  details summary strong { color: #f4f6f8; font-weight: 600; }
+  details .inner { padding: 0 16px 16px; }
+  .crosslink {
+    background: #161922;
+    border: 1px solid #262a33;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-top: 18px;
+    font-size: 13px;
+    color: #b8bec6;
+  }
+  .crosslink strong { color: #f4f6f8; }
+  .crosslink a { color: #4dd0e1; text-decoration: none; }
+  .crosslink a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 28px;
+    padding-top: 14px;
+    border-top: 1px solid #262a33;
+    font-size: 11.5px;
+    color: #6b7079;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Weather forecast</h1>
+    <div class="sub">Friday, June 5, 2026 &middot; refreshes daily 6am PT</div>
+  </header>
+
+  <div class="lead">
+    <strong>Next 3 days:</strong> West side is wet all three days -- showers today, the real soaker Saturday, more showers Sunday. East of the crest stays sunny and 76 today and tomorrow, then storms slide in Sunday afternoon. Best outdoor days are today and Saturday in Cle Elum. Home side, write the weekend off.
+  </div>
+
+  <h2>Home base</h2>
+
+  <div class="card home">
+    <div class="card-head">
+      <div>
+        <div class="loc-name">Woodinville</div>
+        <div class="loc-sub">Home outdoor / scouting / general</div>
+      </div>
+      <span class="badge home">Home</span>
+    </div>
+    <div class="forecast-row">
+      <div class="fc"><div class="day">Fri</div><div class="hi">58&deg; <span class="lo">/50&deg;</span></div><div class="cond">Scattered showers</div><div class="precip">91% rain</div></div>
+      <div class="fc"><div class="day">Sat</div><div class="hi">48&deg; <span class="lo">/46&deg;</span></div><div class="cond">Heavy rain</div><div class="precip">89% rain</div></div>
+      <div class="fc"><div class="day">Sun</div><div class="hi">58&deg; <span class="lo">/42&deg;</span></div><div class="cond">Scattered showers</div><div class="precip">86% rain</div></div>
+    </div>
+    <div class="read">
+      <p><span class="label">Today</span> On/off showers all day, high of 58. Anything outside happens between cells -- keep it short and keep a shell handy.</p>
+      <p><span class="label">Sat</span> The soaker lands. High of 48 with heavy rain, feels like March. Stay in, tie flies, watch the gauges spike.</p>
+      <p><span class="label">Sun</span> Back to 58 but still showery as the system drags out. Yard and gear chores in the dry windows; rivers will be blown regardless.</p>
+    </div>
+  </div>
+
+  <h2>Fishing/hunting spots</h2>
+
+  <div class="card">
+    <div class="card-head">
+      <div>
+        <div class="loc-name">Cle Elum, WA</div>
+        <div class="loc-sub">Upper Yakima &middot; canyon east</div>
+      </div>
+      <span class="badge go">Go today</span>
+    </div>
+    <div class="forecast-row">
+      <div class="fc"><div class="day">Fri</div><div class="hi">76&deg; <span class="lo">/47&deg;</span></div><div class="cond">Mostly sunny, light SE</div><div class="precip">0%</div></div>
+      <div class="fc"><div class="day">Sat</div><div class="hi">76&deg; <span class="lo">/48&deg;</span></div><div class="cond">Sunny, SE ~6</div><div class="precip">0%</div></div>
+      <div class="fc"><div class="day">Sun</div><div class="hi">76&deg; <span class="lo">/48&deg;</span></div><div class="cond">Partly sunny, PM T-storms</div><div class="precip">50% after 11am</div></div>
+    </div>
+    <div class="read">
+      <p><span class="label">Today</span> Sunny, 76, barely any wind while the west side drips. This is the day -- point the truck east.</p>
+      <p><span class="label">Sat</span> Carbon copy: full sun, light breeze. The Saturday escape valve while Woodinville takes the soaker. Expect company on the water.</p>
+      <p><span class="label">Sun</span> The wet finally leaks over the crest -- 50% shot at showers and thunder after 11am. Fish the morning, be off the water before the cells build.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div>
+        <div class="loc-name">North Bend, WA</div>
+        <div class="loc-sub">Middle Fork Snoqualmie</div>
+      </div>
+      <span class="badge no">No go</span>
+    </div>
+    <div class="forecast-row">
+      <div class="fc"><div class="day">Fri</div><div class="hi">57&deg; <span class="lo">/47&deg;</span></div><div class="cond">AM showers, steady PM rain</div><div class="precip">90%</div></div>
+      <div class="fc"><div class="day">Sat</div><div class="hi">55&deg; <span class="lo">/43&deg;</span></div><div class="cond">Cloudy, rain after 2pm</div><div class="precip">70%</div></div>
+      <div class="fc"><div class="day">Sun</div><div class="hi">56&deg; <span class="lo">/40&deg;</span></div><div class="cond">Rain, 0.1-0.25"</div><div class="precip">80%</div></div>
+    </div>
+    <div class="read">
+      <p><span class="label">Today</span> Showers in the morning turn into steady light rain by afternoon. The MF starts creeping up tonight. Skip it.</p>
+      <p><span class="label">Sat</span> Gray morning, rain moving in after 2pm. A short morning window exists in gear, but the valley will be soggy and the river still building.</p>
+      <p><span class="label">Sun</span> Another tenth to quarter inch on a river that's already up. Three wet days in a row -- give the MF most of next week to drop.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <div>
+        <div class="loc-name">Skykomish, WA</div>
+        <div class="loc-sub">Skykomish town / river corridor</div>
+      </div>
+      <span class="badge no">No go</span>
+    </div>
+    <div class="forecast-row">
+      <div class="fc"><div class="day">Fri</div><div class="hi">58&deg; <span class="lo">/47&deg;</span></div><div class="cond">AM + PM showers</div><div class="precip">~70%</div></div>
+      <div class="fc"><div class="day">Sat</div><div class="hi">52&deg; <span class="lo">/44&deg;</span></div><div class="cond">Rain, heaviest of the 3 (est)</div><div class="precip">~85%</div></div>
+      <div class="fc"><div class="day">Sun</div><div class="hi">56&deg; <span class="lo">/43&deg;</span></div><div class="cond">Showers taper (est)</div><div class="precip">~70%</div></div>
+    </div>
+    <div class="read">
+      <p><span class="label">Today</span> Showers morning and afternoon on top of yesterday's half inch. The Sky is already colored up and still climbing. Stay away.</p>
+      <p><span class="label">Sat</span> The Saturday soaker hits the corridor too -- coldest, wettest day of the three. Pure gauge-watching day.</p>
+      <p><span class="label">Sun</span> Showers taper but the damage is done. Day 2-3 detail was thin from the sources, so treat the numbers as a rough read; either way the river needs most of a week.</p>
+    </div>
+  </div>
+
+  <h2>Less frequent</h2>
+
+  <details>
+    <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#e4b961">Showery, mild</span></summary>
+    <div class="inner">
+      <div class="forecast-row">
+        <div class="fc"><div class="day">Fri</div><div class="hi">71&deg; <span class="lo">/46&deg;</span></div><div class="cond">Clouds, occasional showers</div><div class="precip">40%</div></div>
+        <div class="fc"><div class="day">Sat</div><div class="hi">~68&deg; <span class="lo">/45&deg;</span></div><div class="cond">Mixed clouds, shower chance (est)</div><div class="precip">~30%</div></div>
+        <div class="fc"><div class="day">Sun</div><div class="hi">~66&deg; <span class="lo">/44&deg;</span></div><div class="cond">Shower chance (est)</div><div class="precip">~30%</div></div>
+      </div>
+      <div class="read">
+        <p>Warmer than expected -- yesterday's cold-trough call busted and the canyon sits at 71 today with passing showers instead of a 50s washout. Occasional cells, nothing sustained; the Joe should hold its color fine. Fishable today between showers if you're over there. Day 2-3 forecast points near Avery were patchy this morning, so Sat/Sun numbers are estimates off the day-1 trend -- expect a slow cool-down with scattered shower chances, not a soaker.</p>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#e4b961">Storms creeping back</span></summary>
+    <div class="inner">
+      <div class="forecast-row">
+        <div class="fc"><div class="day">Fri</div><div class="hi">80&deg; <span class="lo">/61&deg;</span></div><div class="cond">Partly cloudy</div><div class="precip">~20%</div></div>
+        <div class="fc"><div class="day">Sat</div><div class="hi">76&deg; <span class="lo">/62&deg;</span></div><div class="cond">Clouds, PM T-storms</div><div class="precip">~60%</div></div>
+        <div class="fc"><div class="day">Sun</div><div class="hi">81&deg; <span class="lo">/63&deg;</span></div><div class="cond">AM showers, then humid sun</div><div class="precip">~50%</div></div>
+      </div>
+      <div class="read">
+        <p>The dry break is ending on schedule. Today is still mostly usable -- partly cloudy, 80, low storm risk -- so it's the last clean fishing day on the Toccoa for a bit. Tropical moisture pushes in Saturday and the PM storm machine restarts: fish early, off the water by early afternoon, lightning is back in play. Sunday opens with morning showers then turns humid and unstable. Treat the weekend precip numbers as approximate; the pattern (early windows, afternoon storms) is the reliable part.</p>
+      </div>
+    </div>
+  </details>
+
+  <div class="crosslink">
+    <strong>River flows:</strong> CFS, water temps, and sparklines for all gauges are in the <a href="https://jimbodini19.github.io/river-flows/" target="_blank">river-flows artifact</a>.
+  </div>
+
+  <footer>
+    NWS / AccuWeather. Forecasts are predictions, not guarantees. Always check actual conditions before heading out.
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+{
+  "generated_at_utc": "2026-06-20T18:40:37Z",
+  "generated_at_pt": "2026-06-20 11:40 PT",
+  "source": "Open-Meteo (api.open-meteo.com), WMO weather codes",
+  "locations": {
+    "woodinville": {
+      "name": "Woodinville, WA",
+      "sub": "Home outdoor / scouting / general",
+      "lat": 47.7462,
+      "lon": -122.1119,
+      "home": true,
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-06-20",
+          "dow": "Sat",
+          "hi": 70,
+          "lo": 54,
+          "precip": 2,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-06-21",
+          "dow": "Sun",
+          "hi": 75,
+          "lo": 51,
+          "precip": 0,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 7
+        },
+        {
+          "date": "2026-06-22",
+          "dow": "Mon",
+          "hi": 82,
+          "lo": 51,
+          "precip": 0,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 8
+        }
+      ],
+      "utc_offset_seconds": -25200
+    },
+    "cle_elum": {
+      "name": "Cle Elum, WA",
+      "sub": "Upper Yakima / canyon east",
+      "lat": 47.1954,
+      "lon": -120.9395,
+      "home": false,
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-06-20",
+          "dow": "Sat",
+          "hi": 70,
+          "lo": 57,
+          "precip": 0,
+          "code": 45,
+          "condition": "Fog",
+          "category": "cloud",
+          "wind_mph": 19
+        },
+        {
+          "date": "2026-06-21",
+          "dow": "Sun",
+          "hi": 76,
+          "lo": 54,
+          "precip": 1,
+          "code": 2,
+          "condition": "Partly cloudy",
+          "category": "cloud",
+          "wind_mph": 16
+        },
+        {
+          "date": "2026-06-22",
+          "dow": "Mon",
+          "hi": 87,
+          "lo": 54,
+          "precip": 0,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 9
+        }
+      ],
+      "utc_offset_seconds": -25200
+    },
+    "north_bend": {
+      "name": "North Bend, WA",
+      "sub": "Middle Fork Snoqualmie",
+      "lat": 47.4935,
+      "lon": -121.7831,
+      "home": false,
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-06-20",
+          "dow": "Sat",
+          "hi": 70,
+          "lo": 55,
+          "precip": 3,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 6
+        },
+        {
+          "date": "2026-06-21",
+          "dow": "Sun",
+          "hi": 74,
+          "lo": 53,
+          "precip": 1,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-06-22",
+          "dow": "Mon",
+          "hi": 84,
+          "lo": 57,
+          "precip": 0,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 8
+        }
+      ],
+      "utc_offset_seconds": -25200
+    },
+    "skykomish": {
+      "name": "Skykomish, WA",
+      "sub": "Skykomish town / river corridor",
+      "lat": 47.7094,
+      "lon": -121.359,
+      "home": false,
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-06-20",
+          "dow": "Sat",
+          "hi": 68,
+          "lo": 57,
+          "precip": 0,
+          "code": 45,
+          "condition": "Fog",
+          "category": "cloud",
+          "wind_mph": 11
+        },
+        {
+          "date": "2026-06-21",
+          "dow": "Sun",
+          "hi": 74,
+          "lo": 52,
+          "precip": 1,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-06-22",
+          "dow": "Mon",
+          "hi": 86,
+          "lo": 56,
+          "precip": 0,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 8
+        }
+      ],
+      "utc_offset_seconds": -25200
+    },
+    "avery": {
+      "name": "Avery, ID",
+      "sub": "Upper St. Joe corridor",
+      "lat": 47.2505,
+      "lon": -115.8124,
+      "home": false,
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-06-20",
+          "dow": "Sat",
+          "hi": 78,
+          "lo": 55,
+          "precip": 1,
+          "code": 1,
+          "condition": "Mostly sunny",
+          "category": "clear",
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-06-21",
+          "dow": "Sun",
+          "hi": 75,
+          "lo": 54,
+          "precip": 1,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-06-22",
+          "dow": "Mon",
+          "hi": 81,
+          "lo": 52,
+          "precip": 1,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 9
+        }
+      ],
+      "utc_offset_seconds": -25200
+    },
+    "blue_ridge": {
+      "name": "Blue Ridge, GA",
+      "sub": "Toccoa corridor",
+      "lat": 34.8423,
+      "lon": -84.2999,
+      "home": false,
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-06-20",
+          "dow": "Sat",
+          "hi": 81,
+          "lo": 60,
+          "precip": 6,
+          "code": 45,
+          "condition": "Fog",
+          "category": "cloud",
+          "wind_mph": 6
+        },
+        {
+          "date": "2026-06-21",
+          "dow": "Sun",
+          "hi": 82,
+          "lo": 64,
+          "precip": 3,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-06-22",
+          "dow": "Mon",
+          "hi": 85,
+          "lo": 69,
+          "precip": 88,
+          "code": 96,
+          "condition": "Thunderstorms with hail",
+          "category": "storm",
+          "wind_mph": 12
+        }
+      ],
+      "utc_offset_seconds": -14400
+    }
+  }
+}

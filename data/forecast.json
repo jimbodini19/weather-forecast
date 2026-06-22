@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-22T09:25:42Z",
-  "generated_at_pt": "2026-06-22 02:25 PT",
+  "generated_at_utc": "2026-06-22T10:00:47Z",
+  "generated_at_pt": "2026-06-22 03:00 PT",
   "source": "Open-Meteo (api.open-meteo.com), WMO weather codes",
   "locations": {
     "woodinville": {
@@ -15,7 +15,7 @@
           "date": "2026-06-22",
           "dow": "Mon",
           "hi": 80,
-          "lo": 55,
+          "lo": 54,
           "precip": 1,
           "code": 3,
           "condition": "Overcast",
@@ -64,7 +64,7 @@
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 9
+          "wind_mph": 10
         },
         {
           "date": "2026-06-23",
@@ -190,8 +190,8 @@
         {
           "date": "2026-06-22",
           "dow": "Mon",
-          "hi": 77,
-          "lo": 56,
+          "hi": 78,
+          "lo": 55,
           "precip": 1,
           "code": 1,
           "condition": "Mostly sunny",
@@ -234,13 +234,13 @@
         {
           "date": "2026-06-22",
           "dow": "Mon",
-          "hi": 82,
+          "hi": 83,
           "lo": 68,
           "precip": 42,
           "code": 95,
           "condition": "Thunderstorms",
           "category": "storm",
-          "wind_mph": 14
+          "wind_mph": 20
         },
         {
           "date": "2026-06-23",

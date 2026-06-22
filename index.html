@@ -230,7 +230,7 @@
 <div class="wrap">
   <header>
     <h1>Weather forecast</h1>
-    <div class="sub">Sunday, June 21, 2026 &middot; refreshes daily</div>
+    <div class="sub">Monday, June 22, 2026 &middot; refreshes daily &middot; <span style="color:#e4b961">data stale (held from Jun 21 build)</span></div>
   </header>
 
   <div class="tabs" role="tablist">
@@ -242,7 +242,7 @@
   <div class="tab-panel active" id="tab-forecast" role="tabpanel">
 
     <div class="lead">
-      <strong>Next 3 days:</strong> Mild and dry across the whole west side today, then a steady three-day warm-up that ends hot. Woodinville is the pick right now, mostly sunny and 74 with rain near zero, climbing to 80 Monday and a baking 87 Tuesday. The east side runs a few degrees hotter, Cle Elum 78 today into 88 Tuesday, so it slides toward dawn-and-dusk fishing as the week turns. Skykomish gets some sun today too, the rest of the Cascades sit under high cloud but stay dry. Avery ID is mild and stable, comfortable all three days. The wet corner is Blue Ridge GA, fishable today at 82 before thunderstorms slam in Monday (78 percent, hail risk) and drizzle hangs around Tuesday. Best outdoor day: today, dry and comfortable everywhere out west. Tuesday is the warm one in the Cascades, and the day to stay off the water in Georgia.
+      <strong>Heads up, data is stale.</strong> The Jun 22 build did not refresh, so these numbers are held from the Jun 21 morning build and only run through Tuesday. Check the GitHub Action at github.com/jimbodini19/weather-forecast/actions. <strong>What it showed:</strong> a steady west-side warm-up that ends hot. Woodinville climbs from 80 under high cloud Monday to a baking 87 Tuesday, rain near zero the whole way. The east side runs a few degrees hotter, Cle Elum into 88 Tuesday, so it slides toward dawn-and-dusk fishing as the heat builds. The Cascade rivers stay dry under high cloud. Avery ID is mild and stable. The wet corner is Blue Ridge GA, thunderstorms Monday (78 percent, hail risk) easing to drizzle Tuesday. Best outdoor read on this data: front-load the mornings, Tuesday is the hot one in the Cascades and the wet day to stay off the water in Georgia. Treat all of it as a day old until the Action recovers.
     </div>
 
     <h2>Home base</h2>
@@ -253,7 +253,7 @@
           <div class="loc-name">Woodinville</div>
           <div class="loc-sub">Home outdoor / scouting / general</div>
         </div>
-        <span class="badge home">Home</span>
+        <span class="badge home">Home (stale)</span>
       </div>
       <div class="forecast-row">
         <div class="fc"><div class="day">Sun</div><div class="hi">74&deg; <span class="lo">/51&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">0%</div></div>
@@ -275,7 +275,7 @@
           <div class="loc-name">Cle Elum, WA</div>
           <div class="loc-sub">Upper Yakima &middot; canyon east</div>
         </div>
-        <span class="badge go">Go</span>
+        <span class="badge go">Go (stale)</span>
       </div>
       <div class="forecast-row">
         <div class="fc"><div class="day">Sun</div><div class="hi">78&deg; <span class="lo">/52&deg;</span></div><div class="cond">Overcast, breezy</div><div class="precip">2%</div></div>
@@ -295,7 +295,7 @@
           <div class="loc-name">North Bend, WA</div>
           <div class="loc-sub">Middle Fork Snoqualmie</div>
         </div>
-        <span class="badge go">Go</span>
+        <span class="badge go">Go (stale)</span>
       </div>
       <div class="forecast-row">
         <div class="fc"><div class="day">Sun</div><div class="hi">74&deg; <span class="lo">/53&deg;</span></div><div class="cond">Overcast</div><div class="precip">1%</div></div>
@@ -315,7 +315,7 @@
           <div class="loc-name">Skykomish, WA</div>
           <div class="loc-sub">Skykomish town / river corridor</div>
         </div>
-        <span class="badge go">Go</span>
+        <span class="badge go">Go (stale)</span>
       </div>
       <div class="forecast-row">
         <div class="fc"><div class="day">Sun</div><div class="hi">75&deg; <span class="lo">/51&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">1%</div></div>
@@ -332,7 +332,7 @@
     <h2>Less frequent</h2>
 
     <details>
-      <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#6fd485">Mild and stable, dry</span></summary>
+      <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#6fd485">Mild and stable, dry (stale)</span></summary>
       <div class="inner">
         <div class="forecast-row">
           <div class="fc"><div class="day">Sun</div><div class="hi">76&deg; <span class="lo">/56&deg;</span></div><div class="cond">Partly cloudy</div><div class="precip">0%</div></div>
@@ -346,7 +346,7 @@
     </details>
 
     <details>
-      <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#e4b961">Fishable today, stormy then wet</span></summary>
+      <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#e4b961">Stormy then wet (stale)</span></summary>
       <div class="inner">
         <div class="forecast-row">
           <div class="fc"><div class="day">Sun</div><div class="hi">82&deg; <span class="lo">/61&deg;</span></div><div class="cond">Humid, mostly dry</div><div class="precip">3%</div></div>
@@ -437,7 +437,7 @@
   </div>
 
   <footer>
-    Forecast source: Open-Meteo via the weather-forecast GitHub Action, built 2026-06-21 02:14 PT. Surface front maps: NOAA Weather Prediction Center (live, ~3-hourly). Forecasts are predictions, not guarantees. Always check actual conditions before heading out.
+    Forecast source: Open-Meteo via the weather-forecast GitHub Action, built 2026-06-21 02:14 PT (stale, the Jun 22 refresh did not run). Surface front maps: NOAA Weather Prediction Center (live, ~3-hourly). Forecasts are predictions, not guarantees. Always check actual conditions before heading out.
   </footer>
 </div>
 

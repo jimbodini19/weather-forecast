@@ -2,7 +2,7 @@
 {
   "name": "Weather Forecast",
   "schemaVersion": 1,
-  "description": "Weather forecast for Woodinville home base plus 5 fishing/hunting spots."
+  "description": "Weather forecast for Woodinville home base plus 5 fishing/hunting spots, with a NOAA surface-front analysis maps tab."
 }
 </script>
 <html lang="en">
@@ -21,7 +21,7 @@
     line-height: 1.5;
   }
   .wrap { max-width: 900px; margin: 0 auto; }
-  header { margin-bottom: 20px; }
+  header { margin-bottom: 16px; }
   h1 { font-size: 22px; margin: 0 0 4px; font-weight: 700; color: #f4f6f8; }
   .sub { color: #8a929b; font-size: 13px; }
   h2 {
@@ -32,6 +32,29 @@
     margin: 26px 0 10px;
     font-weight: 600;
   }
+  .tabs {
+    display: flex;
+    gap: 2px;
+    border-bottom: 1px solid #262a33;
+    margin-bottom: 18px;
+  }
+  .tab-btn {
+    background: none;
+    border: none;
+    color: #8a929b;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.15s;
+  }
+  .tab-btn:hover { color: #c8ced5; }
+  .tab-btn.active { color: #f4f6f8; border-bottom-color: #00bcd4; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
   .lead {
     background: #161922;
     border: 1px solid #262a33;
@@ -138,6 +161,49 @@
   details[open] summary::before { content: "-"; }
   details summary strong { color: #f4f6f8; font-weight: 600; }
   details .inner { padding: 0 16px 16px; }
+  .maps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 680px) {
+    .maps-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .map-card {
+    background: #181b22;
+    border: 1px solid #262a33;
+    border-left: 4px solid #00bcd4;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 0 0 12px;
+  }
+  .map-card.full { margin-bottom: 12px; }
+  .map-card .map-title { font-weight: 700; font-size: 14px; color: #f4f6f8; margin-bottom: 2px; }
+  .map-card .map-sub { font-size: 11.5px; color: #8a929b; margin-bottom: 10px; }
+  .map-card a.map-link { display: block; }
+  .map-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #262a33;
+  }
+  .map-card .map-fallback {
+    display: none;
+    background: #11141b;
+    border: 1px dashed #3a3f4a;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 12.5px;
+    color: #b8bec6;
+    text-align: center;
+  }
+  .map-card .map-fallback a { color: #4dd0e1; text-decoration: none; }
+  .map-card .map-fallback a:hover { text-decoration: underline; }
+  .map-card figcaption { font-size: 11.5px; color: #6b7079; margin-top: 8px; line-height: 1.4; }
+  .map-card figcaption a { color: #4dd0e1; text-decoration: none; }
+  .map-card figcaption a:hover { text-decoration: underline; }
   .crosslink {
     background: #161922;
     border: 1px solid #262a33;
@@ -167,131 +233,237 @@
     <div class="sub">Sunday, June 21, 2026 &middot; refreshes daily</div>
   </header>
 
-  <div class="lead">
-    <strong>Next 3 days:</strong> Mild and dry across the whole west side today, then a steady three-day warm-up that ends hot. Woodinville is the pick right now, mostly sunny and 74 with rain near zero, climbing to 80 Monday and a baking 87 Tuesday. The east side runs a few degrees hotter, Cle Elum 78 today into 88 Tuesday, so it slides toward dawn-and-dusk fishing as the week turns. Skykomish gets some sun today too, the rest of the Cascades sit under high cloud but stay dry. Avery ID is mild and stable, comfortable all three days. The wet corner is Blue Ridge GA, fishable today at 82 before thunderstorms slam in Monday (78 percent, hail risk) and drizzle hangs around Tuesday. Best outdoor day: today, dry and comfortable everywhere out west. Tuesday is the warm one in the Cascades, and the day to stay off the water in Georgia.
+  <div class="tabs" role="tablist">
+    <button class="tab-btn active" data-tab="forecast" role="tab">Forecast</button>
+    <button class="tab-btn" data-tab="maps" role="tab">Surface maps</button>
   </div>
 
-  <h2>Home base</h2>
+  <!-- ============ FORECAST TAB ============ -->
+  <div class="tab-panel active" id="tab-forecast" role="tabpanel">
 
-  <div class="card home">
-    <div class="card-head">
-      <div>
-        <div class="loc-name">Woodinville</div>
-        <div class="loc-sub">Home outdoor / scouting / general</div>
+    <div class="lead">
+      <strong>Next 3 days:</strong> Mild and dry across the whole west side today, then a steady three-day warm-up that ends hot. Woodinville is the pick right now, mostly sunny and 74 with rain near zero, climbing to 80 Monday and a baking 87 Tuesday. The east side runs a few degrees hotter, Cle Elum 78 today into 88 Tuesday, so it slides toward dawn-and-dusk fishing as the week turns. Skykomish gets some sun today too, the rest of the Cascades sit under high cloud but stay dry. Avery ID is mild and stable, comfortable all three days. The wet corner is Blue Ridge GA, fishable today at 82 before thunderstorms slam in Monday (78 percent, hail risk) and drizzle hangs around Tuesday. Best outdoor day: today, dry and comfortable everywhere out west. Tuesday is the warm one in the Cascades, and the day to stay off the water in Georgia.
+    </div>
+
+    <h2>Home base</h2>
+
+    <div class="card home">
+      <div class="card-head">
+        <div>
+          <div class="loc-name">Woodinville</div>
+          <div class="loc-sub">Home outdoor / scouting / general</div>
+        </div>
+        <span class="badge home">Home</span>
       </div>
-      <span class="badge home">Home</span>
-    </div>
-    <div class="forecast-row">
-      <div class="fc"><div class="day">Sun</div><div class="hi">74&deg; <span class="lo">/51&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">0%</div></div>
-      <div class="fc"><div class="day">Mon</div><div class="hi">80&deg; <span class="lo">/54&deg;</span></div><div class="cond">High cloud, warm</div><div class="precip">0%</div></div>
-      <div class="fc"><div class="day">Tue</div><div class="hi">87&deg; <span class="lo">/56&deg;</span></div><div class="cond">High cloud, hot</div><div class="precip">0%</div></div>
-    </div>
-    <div class="read">
-      <p><span class="label">Sun</span> Mostly sunny and a clean 74, dry as it gets. Best day of the three to be out, no heat and no rain to manage, knock out whatever is on the list.</p>
-      <p><span class="label">Mon</span> Warms to 80 under high cloud, still dry. Comfortable enough, just a notch warmer through the afternoon.</p>
-      <p><span class="label">Tue</span> Heats hard to 87. The hot one, so front-load anything strenuous into the cool morning and ease off by midday.</p>
-    </div>
-  </div>
-
-  <h2>Fishing/hunting spots</h2>
-
-  <div class="card">
-    <div class="card-head">
-      <div>
-        <div class="loc-name">Cle Elum, WA</div>
-        <div class="loc-sub">Upper Yakima &middot; canyon east</div>
-      </div>
-      <span class="badge go">Go</span>
-    </div>
-    <div class="forecast-row">
-      <div class="fc"><div class="day">Sun</div><div class="hi">78&deg; <span class="lo">/52&deg;</span></div><div class="cond">Overcast, breezy</div><div class="precip">2%</div></div>
-      <div class="fc"><div class="day">Mon</div><div class="hi">83&deg; <span class="lo">/57&deg;</span></div><div class="cond">Overcast, warm</div><div class="precip">1%</div></div>
-      <div class="fc"><div class="day">Tue</div><div class="hi">88&deg; <span class="lo">/59&deg;</span></div><div class="cond">Hot</div><div class="precip">0%</div></div>
-    </div>
-    <div class="read">
-      <p><span class="label">Sun</span> Gray and 78 with a 14 mph breeze, basically dry. Good canyon day, just watch the gusts on open water.</p>
-      <p><span class="label">Mon</span> Warms to 83 under cloud, wind easing. Still fine, but the heat is building so favor the morning.</p>
-      <p><span class="label">Tue</span> Bakes to 88 with the wind picking back up. Dawn and dusk only, haul water if you push through midday.</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-head">
-      <div>
-        <div class="loc-name">North Bend, WA</div>
-        <div class="loc-sub">Middle Fork Snoqualmie</div>
-      </div>
-      <span class="badge go">Go</span>
-    </div>
-    <div class="forecast-row">
-      <div class="fc"><div class="day">Sun</div><div class="hi">74&deg; <span class="lo">/53&deg;</span></div><div class="cond">Overcast</div><div class="precip">1%</div></div>
-      <div class="fc"><div class="day">Mon</div><div class="hi">80&deg; <span class="lo">/58&deg;</span></div><div class="cond">High cloud, warm</div><div class="precip">0%</div></div>
-      <div class="fc"><div class="day">Tue</div><div class="hi">87&deg; <span class="lo">/63&deg;</span></div><div class="cond">Warm, hazy</div><div class="precip">0%</div></div>
-    </div>
-    <div class="read">
-      <p><span class="label">Sun</span> Mild 74 and overcast, dry. Clean window on the Middle Fork, no weather to work around.</p>
-      <p><span class="label">Mon</span> Up to 80 under cloud, still easy. Get the morning in before the valley warms.</p>
-      <p><span class="label">Tue</span> Jumps to 87, the warm one. Fish it early then back off when the valley heats up.</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-head">
-      <div>
-        <div class="loc-name">Skykomish, WA</div>
-        <div class="loc-sub">Skykomish town / river corridor</div>
-      </div>
-      <span class="badge go">Go</span>
-    </div>
-    <div class="forecast-row">
-      <div class="fc"><div class="day">Sun</div><div class="hi">75&deg; <span class="lo">/51&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">1%</div></div>
-      <div class="fc"><div class="day">Mon</div><div class="hi">80&deg; <span class="lo">/60&deg;</span></div><div class="cond">Overcast</div><div class="precip">0%</div></div>
-      <div class="fc"><div class="day">Tue</div><div class="hi">87&deg; <span class="lo">/61&deg;</span></div><div class="cond">Warm</div><div class="precip">0%</div></div>
-    </div>
-    <div class="read">
-      <p><span class="label">Sun</span> Mostly sunny and 75 in the corridor, dry with a light breeze. Soft, easy day on the water, best of the three up here.</p>
-      <p><span class="label">Mon</span> Clouds back over at 80, no cells to watch. Still good fishing weather.</p>
-      <p><span class="label">Tue</span> Warms to 87, hot for up here. Dawn patrol then pull off when it cooks midday.</p>
-    </div>
-  </div>
-
-  <h2>Less frequent</h2>
-
-  <details>
-    <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#6fd485">Mild and stable, dry</span></summary>
-    <div class="inner">
       <div class="forecast-row">
-        <div class="fc"><div class="day">Sun</div><div class="hi">76&deg; <span class="lo">/56&deg;</span></div><div class="cond">Partly cloudy</div><div class="precip">0%</div></div>
-        <div class="fc"><div class="day">Mon</div><div class="hi">77&deg; <span class="lo">/55&deg;</span></div><div class="cond">Partly cloudy</div><div class="precip">2%</div></div>
-        <div class="fc"><div class="day">Tue</div><div class="hi">83&deg; <span class="lo">/51&deg;</span></div><div class="cond">High cloud</div><div class="precip">0%</div></div>
+        <div class="fc"><div class="day">Sun</div><div class="hi">74&deg; <span class="lo">/51&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">0%</div></div>
+        <div class="fc"><div class="day">Mon</div><div class="hi">80&deg; <span class="lo">/54&deg;</span></div><div class="cond">High cloud, warm</div><div class="precip">0%</div></div>
+        <div class="fc"><div class="day">Tue</div><div class="hi">87&deg; <span class="lo">/56&deg;</span></div><div class="cond">High cloud, hot</div><div class="precip">0%</div></div>
       </div>
       <div class="read">
-        <p>The panhandle stays in a go-anytime window, partly cloudy and a comfortable 76 today, near-identical 77 Monday, then warming to 83 Tuesday under high cloud. Dry the whole way with only a token sprinkle chance Monday. The Joe fishes well across all three days, mornings best on the warmer Tuesday.</p>
+        <p><span class="label">Sun</span> Mostly sunny and a clean 74, dry as it gets. Best day of the three to be out, no heat and no rain to manage, knock out whatever is on the list.</p>
+        <p><span class="label">Mon</span> Warms to 80 under high cloud, still dry. Comfortable enough, just a notch warmer through the afternoon.</p>
+        <p><span class="label">Tue</span> Heats hard to 87. The hot one, so front-load anything strenuous into the cool morning and ease off by midday.</p>
       </div>
     </div>
-  </details>
 
-  <details>
-    <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#e4b961">Fishable today, stormy then wet</span></summary>
-    <div class="inner">
+    <h2>Fishing/hunting spots</h2>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="loc-name">Cle Elum, WA</div>
+          <div class="loc-sub">Upper Yakima &middot; canyon east</div>
+        </div>
+        <span class="badge go">Go</span>
+      </div>
       <div class="forecast-row">
-        <div class="fc"><div class="day">Sun</div><div class="hi">82&deg; <span class="lo">/61&deg;</span></div><div class="cond">Humid, mostly dry</div><div class="precip">3%</div></div>
-        <div class="fc"><div class="day">Mon</div><div class="hi">83&deg; <span class="lo">/70&deg;</span></div><div class="cond">T-storms, hail risk</div><div class="precip">78%</div></div>
-        <div class="fc"><div class="day">Tue</div><div class="hi">81&deg; <span class="lo">/63&deg;</span></div><div class="cond">Drizzle, damp</div><div class="precip">78%</div></div>
+        <div class="fc"><div class="day">Sun</div><div class="hi">78&deg; <span class="lo">/52&deg;</span></div><div class="cond">Overcast, breezy</div><div class="precip">2%</div></div>
+        <div class="fc"><div class="day">Mon</div><div class="hi">83&deg; <span class="lo">/57&deg;</span></div><div class="cond">Overcast, warm</div><div class="precip">1%</div></div>
+        <div class="fc"><div class="day">Tue</div><div class="hi">88&deg; <span class="lo">/59&deg;</span></div><div class="cond">Hot</div><div class="precip">0%</div></div>
       </div>
       <div class="read">
-        <p>Good today, wet after. Sunday is a warm humid 82 and mostly dry, very fishable on the Toccoa, so this is the window. Monday is the one to avoid, 78 percent thunderstorms at 83 with hail possible and a stiff 16 mph wind, get off the water well before the afternoon cells fire. Tuesday backs down to drizzle at 81, damp and gray but no lightning, workable in gear if you do not mind getting wet.</p>
+        <p><span class="label">Sun</span> Gray and 78 with a 14 mph breeze, basically dry. Good canyon day, just watch the gusts on open water.</p>
+        <p><span class="label">Mon</span> Warms to 83 under cloud, wind easing. Still fine, but the heat is building so favor the morning.</p>
+        <p><span class="label">Tue</span> Bakes to 88 with the wind picking back up. Dawn and dusk only, haul water if you push through midday.</p>
       </div>
     </div>
-  </details>
 
-  <div class="crosslink">
-    <strong>River flows:</strong> CFS, water temps, and sparklines for all gauges are in the <a href="https://jimbodini19.github.io/river-flows/" target="_blank">river-flows artifact</a>.
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="loc-name">North Bend, WA</div>
+          <div class="loc-sub">Middle Fork Snoqualmie</div>
+        </div>
+        <span class="badge go">Go</span>
+      </div>
+      <div class="forecast-row">
+        <div class="fc"><div class="day">Sun</div><div class="hi">74&deg; <span class="lo">/53&deg;</span></div><div class="cond">Overcast</div><div class="precip">1%</div></div>
+        <div class="fc"><div class="day">Mon</div><div class="hi">80&deg; <span class="lo">/58&deg;</span></div><div class="cond">High cloud, warm</div><div class="precip">0%</div></div>
+        <div class="fc"><div class="day">Tue</div><div class="hi">87&deg; <span class="lo">/63&deg;</span></div><div class="cond">Warm, hazy</div><div class="precip">0%</div></div>
+      </div>
+      <div class="read">
+        <p><span class="label">Sun</span> Mild 74 and overcast, dry. Clean window on the Middle Fork, no weather to work around.</p>
+        <p><span class="label">Mon</span> Up to 80 under cloud, still easy. Get the morning in before the valley warms.</p>
+        <p><span class="label">Tue</span> Jumps to 87, the warm one. Fish it early then back off when the valley heats up.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="loc-name">Skykomish, WA</div>
+          <div class="loc-sub">Skykomish town / river corridor</div>
+        </div>
+        <span class="badge go">Go</span>
+      </div>
+      <div class="forecast-row">
+        <div class="fc"><div class="day">Sun</div><div class="hi">75&deg; <span class="lo">/51&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">1%</div></div>
+        <div class="fc"><div class="day">Mon</div><div class="hi">80&deg; <span class="lo">/60&deg;</span></div><div class="cond">Overcast</div><div class="precip">0%</div></div>
+        <div class="fc"><div class="day">Tue</div><div class="hi">87&deg; <span class="lo">/61&deg;</span></div><div class="cond">Warm</div><div class="precip">0%</div></div>
+      </div>
+      <div class="read">
+        <p><span class="label">Sun</span> Mostly sunny and 75 in the corridor, dry with a light breeze. Soft, easy day on the water, best of the three up here.</p>
+        <p><span class="label">Mon</span> Clouds back over at 80, no cells to watch. Still good fishing weather.</p>
+        <p><span class="label">Tue</span> Warms to 87, hot for up here. Dawn patrol then pull off when it cooks midday.</p>
+      </div>
+    </div>
+
+    <h2>Less frequent</h2>
+
+    <details>
+      <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#6fd485">Mild and stable, dry</span></summary>
+      <div class="inner">
+        <div class="forecast-row">
+          <div class="fc"><div class="day">Sun</div><div class="hi">76&deg; <span class="lo">/56&deg;</span></div><div class="cond">Partly cloudy</div><div class="precip">0%</div></div>
+          <div class="fc"><div class="day">Mon</div><div class="hi">77&deg; <span class="lo">/55&deg;</span></div><div class="cond">Partly cloudy</div><div class="precip">2%</div></div>
+          <div class="fc"><div class="day">Tue</div><div class="hi">83&deg; <span class="lo">/51&deg;</span></div><div class="cond">High cloud</div><div class="precip">0%</div></div>
+        </div>
+        <div class="read">
+          <p>The panhandle stays in a go-anytime window, partly cloudy and a comfortable 76 today, near-identical 77 Monday, then warming to 83 Tuesday under high cloud. Dry the whole way with only a token sprinkle chance Monday. The Joe fishes well across all three days, mornings best on the warmer Tuesday.</p>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#e4b961">Fishable today, stormy then wet</span></summary>
+      <div class="inner">
+        <div class="forecast-row">
+          <div class="fc"><div class="day">Sun</div><div class="hi">82&deg; <span class="lo">/61&deg;</span></div><div class="cond">Humid, mostly dry</div><div class="precip">3%</div></div>
+          <div class="fc"><div class="day">Mon</div><div class="hi">83&deg; <span class="lo">/70&deg;</span></div><div class="cond">T-storms, hail risk</div><div class="precip">78%</div></div>
+          <div class="fc"><div class="day">Tue</div><div class="hi">81&deg; <span class="lo">/63&deg;</span></div><div class="cond">Drizzle, damp</div><div class="precip">78%</div></div>
+        </div>
+        <div class="read">
+          <p>Good today, wet after. Sunday is a warm humid 82 and mostly dry, very fishable on the Toccoa, so this is the window. Monday is the one to avoid, 78 percent thunderstorms at 83 with hail possible and a stiff 16 mph wind, get off the water well before the afternoon cells fire. Tuesday backs down to drizzle at 81, damp and gray but no lightning, workable in gear if you do not mind getting wet.</p>
+        </div>
+      </div>
+    </details>
+
+    <div class="crosslink">
+      <strong>River flows:</strong> CFS, water temps, and sparklines for all gauges are in the <a href="https://jimbodini19.github.io/river-flows/" target="_blank">river-flows artifact</a>.
+    </div>
+
+  </div>
+
+  <!-- ============ SURFACE MAPS TAB ============ -->
+  <div class="tab-panel" id="tab-maps" role="tabpanel">
+
+    <div class="lead">
+      <strong>Surface fronts &amp; pressure (NOAA):</strong> Weather Prediction Center surface analysis showing fronts, highs and lows, and isobars. The cold and warm fronts moving across these charts tell you when the dry pattern breaks and when the next system arrives. These are the latest live charts and refresh roughly every three hours.
+    </div>
+
+    <h2>National</h2>
+
+    <figure class="map-card full">
+      <div class="map-title">Continental U.S.</div>
+      <div class="map-sub">Fronts &amp; surface analysis</div>
+      <a class="map-link" href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">
+        <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/sfc/usfntsfcwbg.gif"
+             alt="NOAA WPC continental U.S. surface analysis with fronts, highs, lows and isobars"
+             loading="lazy"
+             onerror="var c=this.closest('.map-card');c.querySelector('.map-fallback').style.display='block';this.closest('.map-link').style.display='none';">
+      </a>
+      <div class="map-fallback">Live map preview is blocked in this view. <a href="https://www.wpc.ncep.noaa.gov/sfc/usfntsfcwbg.gif" target="_blank" rel="noopener">Open the CONUS fronts map</a>.</div>
+      <figcaption>National view. Source: <a href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">NOAA WPC Surface Analysis</a>.</figcaption>
+    </figure>
+
+    <h2>Regional</h2>
+
+    <div class="maps-grid">
+      <figure class="map-card">
+        <div class="map-title">Pacific Northwest</div>
+        <div class="map-sub">Western U.S. (North) &middot; WA / ID spots</div>
+        <a class="map-link" href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">
+          <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/sfc/namnwsfcwbg.gif"
+               alt="NOAA WPC western U.S. north surface analysis over the Pacific Northwest"
+               loading="lazy"
+               onerror="var c=this.closest('.map-card');c.querySelector('.map-fallback').style.display='block';this.closest('.map-link').style.display='none';">
+        </a>
+        <div class="map-fallback">Live map preview is blocked in this view. <a href="https://www.wpc.ncep.noaa.gov/sfc/namnwsfcwbg.gif" target="_blank" rel="noopener">Open the PNW map</a>.</div>
+        <figcaption>Covers Woodinville, Cle Elum, North Bend, Skykomish, Avery ID.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <div class="map-title">Arizona / Southwest</div>
+        <div class="map-sub">Western U.S. (South)</div>
+        <a class="map-link" href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">
+          <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/sfc/namswsfcwbg.gif"
+               alt="NOAA WPC western U.S. south surface analysis over Arizona and the Southwest"
+               loading="lazy"
+               onerror="var c=this.closest('.map-card');c.querySelector('.map-fallback').style.display='block';this.closest('.map-link').style.display='none';">
+        </a>
+        <div class="map-fallback">Live map preview is blocked in this view. <a href="https://www.wpc.ncep.noaa.gov/sfc/namswsfcwbg.gif" target="_blank" rel="noopener">Open the Southwest map</a>.</div>
+        <figcaption>Covers Arizona and the desert Southwest.</figcaption>
+      </figure>
+
+      <figure class="map-card">
+        <div class="map-title">Blue Ridge / Southeast</div>
+        <div class="map-sub">Eastern U.S. (South) &middot; GA</div>
+        <a class="map-link" href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">
+          <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/sfc/namsesfcwbg.gif"
+               alt="NOAA WPC eastern U.S. south surface analysis over Georgia and the Southeast"
+               loading="lazy"
+               onerror="var c=this.closest('.map-card');c.querySelector('.map-fallback').style.display='block';this.closest('.map-link').style.display='none';">
+        </a>
+        <div class="map-fallback">Live map preview is blocked in this view. <a href="https://www.wpc.ncep.noaa.gov/sfc/namsesfcwbg.gif" target="_blank" rel="noopener">Open the Southeast map</a>.</div>
+        <figcaption>Covers Blue Ridge GA and the Toccoa corridor.</figcaption>
+      </figure>
+    </div>
+
+    <div class="crosslink">
+      Full product list, loops, and B/W versions at <a href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">NOAA WPC Surface Analysis</a>.
+    </div>
+
   </div>
 
   <footer>
-    Source: Open-Meteo via the weather-forecast GitHub Action, built 2026-06-21 02:14 PT. Forecasts are predictions, not guarantees. Always check actual conditions before heading out.
+    Forecast source: Open-Meteo via the weather-forecast GitHub Action, built 2026-06-21 02:14 PT. Surface front maps: NOAA Weather Prediction Center (live, ~3-hourly). Forecasts are predictions, not guarantees. Always check actual conditions before heading out.
   </footer>
 </div>
+
+<script>
+(function () {
+  // Cache-bust the NOAA maps hourly so the daily-built page still shows fresh charts.
+  var stamp = Math.floor(Date.now() / 3600000);
+  var maps = document.querySelectorAll('img.noaa-map');
+  for (var i = 0; i < maps.length; i++) {
+    var u = maps[i].getAttribute('src');
+    maps[i].setAttribute('src', u + (u.indexOf('?') > -1 ? '&' : '?') + 'cb=' + stamp);
+  }
+  // Tab switching.
+  var btns = document.querySelectorAll('.tab-btn');
+  var panels = document.querySelectorAll('.tab-panel');
+  for (var b = 0; b < btns.length; b++) {
+    btns[b].addEventListener('click', function () {
+      var tab = this.getAttribute('data-tab');
+      for (var j = 0; j < btns.length; j++) btns[j].classList.remove('active');
+      for (var k = 0; k < panels.length; k++) panels[k].classList.remove('active');
+      this.classList.add('active');
+      var panel = document.getElementById('tab-' + tab);
+      if (panel) panel.classList.add('active');
+    });
+  }
+})();
+</script>
 </body>
 </html>

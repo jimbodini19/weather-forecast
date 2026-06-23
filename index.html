@@ -224,6 +224,69 @@
     color: #6b7079;
     line-height: 1.6;
   }
+  .prog-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .prog-card {
+    background: #181b22;
+    border: 1px solid #262a33;
+    border-left: 3px solid #00bcd4;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 0;
+  }
+  .prog-card .prog-title { font-weight: 700; font-size: 12px; color: #f4f6f8; }
+  .prog-card .prog-sub { font-size: 10.5px; color: #8a929b; margin-bottom: 6px; }
+  .prog-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #262a33;
+    cursor: zoom-in;
+  }
+  .prog-card .map-fallback {
+    display: none;
+    background: #11141b;
+    border: 1px dashed #3a3f4a;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 11px;
+    color: #b8bec6;
+    text-align: center;
+  }
+  .prog-card .map-fallback a { color: #4dd0e1; text-decoration: none; }
+  #lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  #lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  }
+  #lightbox .lb-hint {
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #8a929b;
+    font-size: 12px;
+  }
 </style>
 </head>
 <body>
@@ -375,6 +438,42 @@
       <strong>Surface fronts &amp; pressure (NOAA):</strong> Weather Prediction Center surface analysis showing fronts, highs and lows, and isobars. The cold and warm fronts moving across these charts tell you when the dry pattern breaks and when the next system arrives. These are the latest live charts and refresh roughly every three hours.
     </div>
 
+    <h2>Next 72 hours &middot; forecast progression</h2>
+
+    <div class="map-sub" style="margin: -4px 0 12px; font-size: 12.5px; color: #8a929b;">
+      WPC national forecast surface charts. The Pacific Northwest is in the upper-left of each, so these show the fronts moving toward Woodinville and the Cascades over the next three days. Valid times are printed on each chart. Tap any map to magnify.
+    </div>
+
+    <div class="prog-row">
+      <figure class="prog-card">
+        <div class="prog-title">Day 1</div>
+        <div class="prog-sub">+24h</div>
+        <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/noaa/noaad1.gif"
+             alt="NOAA WPC Day 1 forecast surface analysis with fronts, highs, lows and isobars"
+             loading="lazy" onclick="zoomMap(this)"
+             onerror="var c=this.closest('.prog-card');c.querySelector('.map-fallback').style.display='block';this.style.display='none';">
+        <div class="map-fallback">Preview blocked. <a href="https://www.wpc.ncep.noaa.gov/noaa/noaad1.gif" target="_blank" rel="noopener">Open Day 1</a>.</div>
+      </figure>
+      <figure class="prog-card">
+        <div class="prog-title">Day 2</div>
+        <div class="prog-sub">+48h</div>
+        <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/noaa/noaad2.gif"
+             alt="NOAA WPC Day 2 forecast surface analysis with fronts, highs, lows and isobars"
+             loading="lazy" onclick="zoomMap(this)"
+             onerror="var c=this.closest('.prog-card');c.querySelector('.map-fallback').style.display='block';this.style.display='none';">
+        <div class="map-fallback">Preview blocked. <a href="https://www.wpc.ncep.noaa.gov/noaa/noaad2.gif" target="_blank" rel="noopener">Open Day 2</a>.</div>
+      </figure>
+      <figure class="prog-card">
+        <div class="prog-title">Day 3</div>
+        <div class="prog-sub">+72h</div>
+        <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/noaa/noaad3.gif"
+             alt="NOAA WPC Day 3 forecast surface analysis with fronts, highs, lows and isobars"
+             loading="lazy" onclick="zoomMap(this)"
+             onerror="var c=this.closest('.prog-card');c.querySelector('.map-fallback').style.display='block';this.style.display='none';">
+        <div class="map-fallback">Preview blocked. <a href="https://www.wpc.ncep.noaa.gov/noaa/noaad3.gif" target="_blank" rel="noopener">Open Day 3</a>.</div>
+      </figure>
+    </div>
+
     <h2>National</h2>
 
     <figure class="map-card full">
@@ -433,51 +532,6 @@
       </figure>
     </div>
 
-    <h2>Pacific NW outlook &middot; next 72 hours</h2>
-
-    <div class="map-sub" style="margin: -4px 0 12px; font-size: 12.5px; color: #8a929b;">
-      WPC forecast surface charts, fronts and pressure. The Pacific Northwest sits in the upper-left of each chart, so these show the systems moving toward Woodinville and the Cascades over the next three days. Each chart has its valid date and time printed on it, and they refresh through the day like the analysis maps above.
-    </div>
-
-    <figure class="map-card full">
-      <div class="map-title">Day 1 &middot; +24h forecast</div>
-      <div class="map-sub">Forecast surface fronts &amp; pressure</div>
-      <a class="map-link" href="https://www.wpc.ncep.noaa.gov/noaa/noaad1.gif" target="_blank" rel="noopener">
-        <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/noaa/noaad1.gif"
-             alt="NOAA WPC Day 1 forecast surface analysis with fronts, highs, lows and isobars"
-             loading="lazy"
-             onerror="var c=this.closest('.map-card');c.querySelector('.map-fallback').style.display='block';this.closest('.map-link').style.display='none';">
-      </a>
-      <div class="map-fallback">Live map preview is blocked in this view. <a href="https://www.wpc.ncep.noaa.gov/noaa/noaad1.gif" target="_blank" rel="noopener">Open the Day 1 forecast map</a>.</div>
-      <figcaption>Day 1 forecast. Source: <a href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">NOAA WPC</a>.</figcaption>
-    </figure>
-
-    <figure class="map-card full">
-      <div class="map-title">Day 2 &middot; +48h forecast</div>
-      <div class="map-sub">Forecast surface fronts &amp; pressure</div>
-      <a class="map-link" href="https://www.wpc.ncep.noaa.gov/noaa/noaad2.gif" target="_blank" rel="noopener">
-        <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/noaa/noaad2.gif"
-             alt="NOAA WPC Day 2 forecast surface analysis with fronts, highs, lows and isobars"
-             loading="lazy"
-             onerror="var c=this.closest('.map-card');c.querySelector('.map-fallback').style.display='block';this.closest('.map-link').style.display='none';">
-      </a>
-      <div class="map-fallback">Live map preview is blocked in this view. <a href="https://www.wpc.ncep.noaa.gov/noaa/noaad2.gif" target="_blank" rel="noopener">Open the Day 2 forecast map</a>.</div>
-      <figcaption>Day 2 forecast. Source: <a href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">NOAA WPC</a>.</figcaption>
-    </figure>
-
-    <figure class="map-card full">
-      <div class="map-title">Day 3 &middot; +72h forecast</div>
-      <div class="map-sub">Forecast surface fronts &amp; pressure</div>
-      <a class="map-link" href="https://www.wpc.ncep.noaa.gov/noaa/noaad3.gif" target="_blank" rel="noopener">
-        <img class="noaa-map" src="https://www.wpc.ncep.noaa.gov/noaa/noaad3.gif"
-             alt="NOAA WPC Day 3 forecast surface analysis with fronts, highs, lows and isobars"
-             loading="lazy"
-             onerror="var c=this.closest('.map-card');c.querySelector('.map-fallback').style.display='block';this.closest('.map-link').style.display='none';">
-      </a>
-      <div class="map-fallback">Live map preview is blocked in this view. <a href="https://www.wpc.ncep.noaa.gov/noaa/noaad3.gif" target="_blank" rel="noopener">Open the Day 3 forecast map</a>.</div>
-      <figcaption>Day 3 forecast. Source: <a href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">NOAA WPC</a>.</figcaption>
-    </figure>
-
     <div class="crosslink">
       Full product list, loops, and B/W versions at <a href="https://www.wpc.ncep.noaa.gov/html/sfc2.shtml" target="_blank" rel="noopener">NOAA WPC Surface Analysis</a>.
     </div>
@@ -489,7 +543,22 @@
   </footer>
 </div>
 
+<div id="lightbox" onclick="this.style.display='none'">
+  <img id="lightbox-img" src="" alt="Magnified forecast map">
+  <div class="lb-hint">Tap anywhere to close</div>
+</div>
+
 <script>
+// Magnify a map into the lightbox overlay.
+function zoomMap(img) {
+  var lb = document.getElementById('lightbox');
+  var li = document.getElementById('lightbox-img');
+  li.setAttribute('src', img.getAttribute('src'));
+  lb.style.display = 'flex';
+}
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') document.getElementById('lightbox').style.display = 'none';
+});
 (function () {
   // Cache-bust the NOAA maps hourly so the daily-built page still shows fresh charts.
   var stamp = Math.floor(Date.now() / 3600000);

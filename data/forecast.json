@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-24T09:04:49Z",
-  "generated_at_pt": "2026-06-24 02:04 PT",
+  "generated_at_utc": "2026-06-25T09:04:52Z",
+  "generated_at_pt": "2026-06-25 02:04 PT",
   "source": "Open-Meteo (api.open-meteo.com), WMO weather codes",
   "locations": {
     "woodinville": {
@@ -12,37 +12,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-06-24",
-          "dow": "Wed",
-          "hi": 85,
-          "lo": 63,
-          "precip": 2,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 10
-        },
-        {
           "date": "2026-06-25",
           "dow": "Thu",
-          "hi": 66,
-          "lo": 54,
-          "precip": 33,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 9
+          "hi": 70,
+          "lo": 55,
+          "precip": 26,
+          "code": 61,
+          "condition": "Light rain",
+          "category": "rain",
+          "wind_mph": 10
         },
         {
           "date": "2026-06-26",
           "dow": "Fri",
           "hi": 63,
           "lo": 50,
-          "precip": 91,
-          "code": 53,
-          "condition": "Drizzle",
+          "precip": 57,
+          "code": 63,
+          "condition": "Rain",
           "category": "rain",
-          "wind_mph": 11
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-06-27",
+          "dow": "Sat",
+          "hi": 67,
+          "lo": 50,
+          "precip": 66,
+          "code": 51,
+          "condition": "Light drizzle",
+          "category": "rain",
+          "wind_mph": 7
         }
       ],
       "utc_offset_seconds": -25200
@@ -56,37 +56,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-06-24",
-          "dow": "Wed",
-          "hi": 86,
-          "lo": 62,
-          "precip": 16,
-          "code": 53,
-          "condition": "Drizzle",
-          "category": "rain",
-          "wind_mph": 16
-        },
-        {
           "date": "2026-06-25",
           "dow": "Thu",
-          "hi": 73,
-          "lo": 56,
-          "precip": 11,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
+          "hi": 76,
+          "lo": 57,
+          "precip": 12,
+          "code": 51,
+          "condition": "Light drizzle",
+          "category": "rain",
           "wind_mph": 15
         },
         {
           "date": "2026-06-26",
           "dow": "Fri",
-          "hi": 59,
-          "lo": 48,
-          "precip": 68,
+          "hi": 60,
+          "lo": 51,
+          "precip": 62,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 11
+          "wind_mph": 17
+        },
+        {
+          "date": "2026-06-27",
+          "dow": "Sat",
+          "hi": 65,
+          "lo": 46,
+          "precip": 8,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 16
         }
       ],
       "utc_offset_seconds": -25200
@@ -100,35 +100,35 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-06-24",
-          "dow": "Wed",
-          "hi": 84,
-          "lo": 66,
-          "precip": 2,
-          "code": 95,
-          "condition": "Thunderstorms",
-          "category": "storm",
-          "wind_mph": 8
-        },
-        {
           "date": "2026-06-25",
           "dow": "Thu",
-          "hi": 71,
-          "lo": 55,
-          "precip": 48,
-          "code": 51,
-          "condition": "Light drizzle",
+          "hi": 73,
+          "lo": 58,
+          "precip": 47,
+          "code": 55,
+          "condition": "Heavy drizzle",
           "category": "rain",
           "wind_mph": 6
         },
         {
           "date": "2026-06-26",
           "dow": "Fri",
-          "hi": 60,
-          "lo": 51,
-          "precip": 98,
-          "code": 55,
-          "condition": "Heavy drizzle",
+          "hi": 62,
+          "lo": 54,
+          "precip": 87,
+          "code": 53,
+          "condition": "Drizzle",
+          "category": "rain",
+          "wind_mph": 7
+        },
+        {
+          "date": "2026-06-27",
+          "dow": "Sat",
+          "hi": 63,
+          "lo": 50,
+          "precip": 67,
+          "code": 51,
+          "condition": "Light drizzle",
           "category": "rain",
           "wind_mph": 6
         }
@@ -144,35 +144,35 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-06-24",
-          "dow": "Wed",
-          "hi": 84,
-          "lo": 69,
-          "precip": 2,
-          "code": 95,
-          "condition": "Thunderstorms",
-          "category": "storm",
-          "wind_mph": 10
-        },
-        {
           "date": "2026-06-25",
           "dow": "Thu",
-          "hi": 72,
-          "lo": 56,
-          "precip": 37,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
+          "hi": 74,
+          "lo": 59,
+          "precip": 32,
+          "code": 55,
+          "condition": "Heavy drizzle",
+          "category": "rain",
           "wind_mph": 10
         },
         {
           "date": "2026-06-26",
           "dow": "Fri",
-          "hi": 59,
-          "lo": 52,
-          "precip": 99,
-          "code": 80,
-          "condition": "Rain showers",
+          "hi": 60,
+          "lo": 53,
+          "precip": 89,
+          "code": 55,
+          "condition": "Heavy drizzle",
+          "category": "rain",
+          "wind_mph": 9
+        },
+        {
+          "date": "2026-06-27",
+          "dow": "Sat",
+          "hi": 60,
+          "lo": 49,
+          "precip": 77,
+          "code": 51,
+          "condition": "Light drizzle",
           "category": "rain",
           "wind_mph": 5
         }
@@ -188,37 +188,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-06-24",
-          "dow": "Wed",
-          "hi": 85,
-          "lo": 62,
-          "precip": 3,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 7
-        },
-        {
           "date": "2026-06-25",
           "dow": "Thu",
           "hi": 81,
-          "lo": 63,
+          "lo": 62,
           "precip": 4,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 9
+          "wind_mph": 8
         },
         {
           "date": "2026-06-26",
           "dow": "Fri",
-          "hi": 61,
-          "lo": 53,
-          "precip": 78,
-          "code": 53,
-          "condition": "Drizzle",
+          "hi": 68,
+          "lo": 52,
+          "precip": 45,
+          "code": 61,
+          "condition": "Light rain",
           "category": "rain",
-          "wind_mph": 6
+          "wind_mph": 7
+        },
+        {
+          "date": "2026-06-27",
+          "dow": "Sat",
+          "hi": 54,
+          "lo": 50,
+          "precip": 64,
+          "code": 80,
+          "condition": "Rain showers",
+          "category": "rain",
+          "wind_mph": 3
         }
       ],
       "utc_offset_seconds": -25200
@@ -232,22 +232,11 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-06-24",
-          "dow": "Wed",
-          "hi": 79,
-          "lo": 58,
-          "precip": 2,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 6
-        },
-        {
           "date": "2026-06-25",
           "dow": "Thu",
-          "hi": 84,
-          "lo": 62,
-          "precip": 6,
+          "hi": 83,
+          "lo": 58,
+          "precip": 3,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
@@ -256,10 +245,21 @@
         {
           "date": "2026-06-26",
           "dow": "Fri",
-          "hi": 88,
-          "lo": 65,
-          "precip": 37,
-          "code": 96,
+          "hi": 83,
+          "lo": 68,
+          "precip": 20,
+          "code": 2,
+          "condition": "Partly cloudy",
+          "category": "cloud",
+          "wind_mph": 9
+        },
+        {
+          "date": "2026-06-27",
+          "dow": "Sat",
+          "hi": 85,
+          "lo": 67,
+          "precip": 42,
+          "code": 99,
           "condition": "Thunderstorms with hail",
           "category": "storm",
           "wind_mph": 10

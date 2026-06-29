@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-06-29T09:34:56Z",
-  "generated_at_pt": "2026-06-29 02:34 PT",
+  "generated_at_utc": "2026-06-29T16:20:14Z",
+  "generated_at_pt": "2026-06-29 09:20 PT",
   "source": "Open-Meteo (api.open-meteo.com), WMO weather codes",
   "locations": {
     "woodinville": {
@@ -14,9 +14,9 @@
         {
           "date": "2026-06-29",
           "dow": "Mon",
-          "hi": 70,
+          "hi": 66,
           "lo": 54,
-          "precip": 12,
+          "precip": 7,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
@@ -26,18 +26,18 @@
           "date": "2026-06-30",
           "dow": "Tue",
           "hi": 64,
-          "lo": 52,
+          "lo": 54,
           "precip": 5,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 8
+          "wind_mph": 7
         },
         {
           "date": "2026-07-01",
           "dow": "Wed",
-          "hi": 64,
-          "lo": 51,
+          "hi": 63,
+          "lo": 50,
           "precip": 3,
           "code": 3,
           "condition": "Overcast",
@@ -58,11 +58,11 @@
         {
           "date": "2026-06-29",
           "dow": "Mon",
-          "hi": 66,
-          "lo": 51,
-          "precip": 7,
-          "code": 3,
-          "condition": "Overcast",
+          "hi": 64,
+          "lo": 52,
+          "precip": 6,
+          "code": 45,
+          "condition": "Fog",
           "category": "cloud",
           "wind_mph": 21
         },
@@ -70,17 +70,17 @@
           "date": "2026-06-30",
           "dow": "Tue",
           "hi": 66,
-          "lo": 50,
+          "lo": 52,
           "precip": 1,
-          "code": 0,
-          "condition": "Clear",
-          "category": "clear",
+          "code": 2,
+          "condition": "Partly cloudy",
+          "category": "cloud",
           "wind_mph": 19
         },
         {
           "date": "2026-07-01",
           "dow": "Wed",
-          "hi": 68,
+          "hi": 67,
           "lo": 46,
           "precip": 1,
           "code": 3,
@@ -102,9 +102,9 @@
         {
           "date": "2026-06-29",
           "dow": "Mon",
-          "hi": 69,
+          "hi": 64,
           "lo": 54,
-          "precip": 17,
+          "precip": 16,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
@@ -113,24 +113,24 @@
         {
           "date": "2026-06-30",
           "dow": "Tue",
-          "hi": 62,
-          "lo": 54,
+          "hi": 63,
+          "lo": 56,
           "precip": 7,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 7
+          "wind_mph": 6
         },
         {
           "date": "2026-07-01",
           "dow": "Wed",
-          "hi": 62,
+          "hi": 61,
           "lo": 52,
-          "precip": 13,
+          "precip": 10,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 5
+          "wind_mph": 4
         }
       ],
       "utc_offset_seconds": -25200
@@ -146,11 +146,11 @@
         {
           "date": "2026-06-29",
           "dow": "Mon",
-          "hi": 65,
+          "hi": 61,
           "lo": 52,
-          "precip": 20,
-          "code": 3,
-          "condition": "Overcast",
+          "precip": 18,
+          "code": 45,
+          "condition": "Fog",
           "category": "cloud",
           "wind_mph": 10
         },
@@ -159,7 +159,7 @@
           "dow": "Tue",
           "hi": 63,
           "lo": 55,
-          "precip": 18,
+          "precip": 15,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
@@ -170,7 +170,7 @@
           "dow": "Wed",
           "hi": 59,
           "lo": 52,
-          "precip": 18,
+          "precip": 19,
           "code": 51,
           "condition": "Light drizzle",
           "category": "rain",
@@ -190,38 +190,82 @@
         {
           "date": "2026-06-29",
           "dow": "Mon",
-          "hi": 58,
+          "hi": 62,
           "lo": 52,
           "precip": 100,
           "code": 63,
           "condition": "Rain",
           "category": "rain",
-          "wind_mph": 10
+          "wind_mph": 9
         },
         {
           "date": "2026-06-30",
           "dow": "Tue",
-          "hi": 62,
-          "lo": 54,
-          "precip": 45,
-          "code": 61,
-          "condition": "Light rain",
-          "category": "rain",
-          "wind_mph": 6
+          "hi": 67,
+          "lo": 55,
+          "precip": 29,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 8
         },
         {
           "date": "2026-07-01",
           "dow": "Wed",
-          "hi": 77,
+          "hi": 76,
           "lo": 49,
           "precip": 1,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 10
+          "wind_mph": 11
         }
       ],
       "utc_offset_seconds": -25200
+    },
+    "riggins": {
+      "name": "Riggins, ID",
+      "sub": "Salmon River corridor",
+      "lat": 45.4146,
+      "lon": -116.3162,
+      "home": false,
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-06-29",
+          "dow": "Mon",
+          "hi": 70,
+          "lo": 55,
+          "precip": 91,
+          "code": 53,
+          "condition": "Drizzle",
+          "category": "rain",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-06-30",
+          "dow": "Tue",
+          "hi": 77,
+          "lo": 56,
+          "precip": 62,
+          "code": 53,
+          "condition": "Drizzle",
+          "category": "rain",
+          "wind_mph": 9
+        },
+        {
+          "date": "2026-07-01",
+          "dow": "Wed",
+          "hi": 83,
+          "lo": 56,
+          "precip": 62,
+          "code": 51,
+          "condition": "Light drizzle",
+          "category": "rain",
+          "wind_mph": 7
+        }
+      ],
+      "utc_offset_seconds": -21600
     },
     "blue_ridge": {
       "name": "Blue Ridge, GA",
@@ -235,8 +279,8 @@
           "date": "2026-06-29",
           "dow": "Mon",
           "hi": 91,
-          "lo": 70,
-          "precip": 5,
+          "lo": 69,
+          "precip": 4,
           "code": 1,
           "condition": "Mostly sunny",
           "category": "clear",
@@ -245,9 +289,9 @@
         {
           "date": "2026-06-30",
           "dow": "Tue",
-          "hi": 93,
+          "hi": 94,
           "lo": 73,
-          "precip": 22,
+          "precip": 14,
           "code": 95,
           "condition": "Thunderstorms",
           "category": "storm",
@@ -256,13 +300,13 @@
         {
           "date": "2026-07-01",
           "dow": "Wed",
-          "hi": 97,
-          "lo": 63,
-          "precip": 38,
+          "hi": 94,
+          "lo": 64,
+          "precip": 44,
           "code": 95,
           "condition": "Thunderstorms",
           "category": "storm",
-          "wind_mph": 12
+          "wind_mph": 11
         }
       ],
       "utc_offset_seconds": -14400

@@ -13,6 +13,7 @@ LOCATIONS = [
     {"id": "north_bend",  "name": "North Bend, WA",  "sub": "Middle Fork Snoqualmie",            "lat": 47.4935, "lon": -121.7831},
     {"id": "skykomish",   "name": "Skykomish, WA",   "sub": "Skykomish town / river corridor",   "lat": 47.7094, "lon": -121.3590},
     {"id": "avery",       "name": "Avery, ID",       "sub": "Upper St. Joe corridor",            "lat": 47.2505, "lon": -115.8124},
+    {"id": "riggins",     "name": "Riggins, ID",     "sub": "Salmon River corridor",             "lat": 45.4146, "lon": -116.3162},
     {"id": "blue_ridge",  "name": "Blue Ridge, GA",  "sub": "Toccoa corridor",                   "lat": 34.8423, "lon": -84.2999},
 ]
 

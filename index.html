@@ -294,7 +294,7 @@
   <header style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
     <div>
       <h1>Weather forecast</h1>
-      <div class="sub">Wednesday, July 8, 2026 &middot; refreshes daily &middot; <span style="color:#e4b961;">data stale, last built Jul 7</span></div>
+      <div class="sub">Wednesday, July 8, 2026 &middot; refreshes daily</div>
     </div>
     <a href="https://jimbodini19.github.io/weather-forecast/" target="_blank" rel="noopener" style="color:#4dd0e1; text-decoration:none; font-size:13px; font-weight:600; white-space:nowrap; flex-shrink:0; margin-top:6px;">Open page &#8599;</a>
   </header>
@@ -307,12 +307,8 @@
   <!-- ============ FORECAST TAB ============ -->
   <div class="tab-panel active" id="tab-forecast" role="tabpanel">
 
-    <div class="lead" style="border-left-color:#e4b961;">
-      <strong style="color:#e4b961;">Heads up (stale):</strong> The overnight data build did not run for Jul 8, so these numbers are held over from the Jul 7 forecast (day 0 below is Tue Jul 7, not today). Treat them as a day behind and check the GitHub Action if this repeats: github.com/jimbodini19/weather-forecast/actions.
-    </div>
-
     <div class="lead">
-      <strong>Next 3 days (stale):</strong> West-side sits under a soft gray overcast lid the whole stretch, but it stays dry and mild -- Woodinville and the Snoqualmie/Sky spots all run low single-digit to mid-teen precip with highs in the 70s. Today (Tue) is the warmest west-side day before a small midweek cooldown Wednesday, then it nudges back up Thursday. East of the crest, Cle Elum is dry but honking wind near 18 mph all three days. Idaho is the warm-and-dry play: Avery in the low-to-mid 80s, Riggins hot in the 90s and clean. Best all-around outdoor days are Tuesday and Thursday west of the crest, dry and warm under the ceiling. Blue Ridge GA is the outlier, hot and humid in the upper 80s with rain building to near 50 percent by Thursday.
+      <strong>Next 3 days:</strong> West-side stays under a soft gray overcast lid Wed through Fri but it holds dry and mild -- Woodinville and the Snoqualmie/Sky spots all run single-digit precip with highs in the low 70s, easing a couple degrees by Friday. Every west-side day is fishable; Thursday is the pick, a touch warmer near 73 to 74 before Friday cools. East of the crest, Cle Elum is bone dry but honking wind near 17 mph all three days, then clears Friday. Idaho is the warm-and-dry play: Avery low-80s, Riggins hot in the mid-90s and mostly clean. Blue Ridge GA is the outlier and the one to watch: nice Wednesday, then heavy rain Thursday and thunderstorms Friday with lightning in play.
     </div>
 
     <h2>Home base</h2>
@@ -320,20 +316,20 @@
     <div class="card home">
       <div class="card-head">
         <div>
-          <div class="loc-name">Woodinville (stale)</div>
+          <div class="loc-name">Woodinville</div>
           <div class="loc-sub">Home outdoor / scouting / general</div>
         </div>
         <span class="badge home">Home</span>
       </div>
       <div class="forecast-row">
-        <div class="fc"><div class="day">Tue</div><div class="hi">77&deg; <span class="lo">/54&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">2%</div></div>
-        <div class="fc"><div class="day">Wed</div><div class="hi">71&deg; <span class="lo">/51&deg;</span></div><div class="cond">Overcast, cooler</div><div class="precip">10%</div></div>
-        <div class="fc"><div class="day">Thu</div><div class="hi">76&deg; <span class="lo">/51&deg;</span></div><div class="cond">Overcast, breezy</div><div class="precip">4%</div></div>
+        <div class="fc"><div class="day">Wed</div><div class="hi">71&deg; <span class="lo">/54&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">6%</div></div>
+        <div class="fc"><div class="day">Thu</div><div class="hi">73&deg; <span class="lo">/52&deg;</span></div><div class="cond">Overcast, mild</div><div class="precip">3%</div></div>
+        <div class="fc"><div class="day">Fri</div><div class="hi">68&deg; <span class="lo">/50&deg;</span></div><div class="cond">Overcast, cooler</div><div class="precip">0%</div></div>
       </div>
       <div class="read">
-        <p><span class="label">Tue</span> Warmest day at 77 and bone dry at 2 percent on a light 9 mph wind. Gray lid overhead but nothing to dodge, get into whatever you want.</p>
-        <p><span class="label">Wed</span> Backs off to 71 and odds tick to 10 percent, still soft at 7 mph. Cooler and grayer but workable, keep a shell handy.</p>
-        <p><span class="label">Thu</span> Warms back to 76 and dries to 4 percent, breeze up near 12. Clean day under the ceiling, get after it.</p>
+        <p><span class="label">Wed</span> Mild 71 and basically dry at 6 percent on a light 9 mph wind. Gray lid overhead but nothing to dodge, get into whatever you want.</p>
+        <p><span class="label">Thu</span> Nudges up to 73 and dries to 3 percent, still soft at 10 mph. Best of the stretch, get after it.</p>
+        <p><span class="label">Fri</span> Cools to 68 but bone dry at 0 percent on a near-calm 5 mph. Grayer and cooler, still an easy day out.</p>
       </div>
     </div>
 
@@ -342,103 +338,103 @@
     <div class="card">
       <div class="card-head">
         <div>
-          <div class="loc-name">Cle Elum, WA (stale)</div>
+          <div class="loc-name">Cle Elum, WA</div>
           <div class="loc-sub">Upper Yakima &middot; canyon east</div>
         </div>
         <span class="badge go">Go</span>
       </div>
       <div class="forecast-row">
-        <div class="fc"><div class="day">Tue</div><div class="hi">84&deg; <span class="lo">/61&deg;</span></div><div class="cond">Overcast, windy</div><div class="precip">2%</div></div>
-        <div class="fc"><div class="day">Wed</div><div class="hi">73&deg; <span class="lo">/57&deg;</span></div><div class="cond">Cooler, windy</div><div class="precip">2%</div></div>
-        <div class="fc"><div class="day">Thu</div><div class="hi">74&deg; <span class="lo">/50&deg;</span></div><div class="cond">Dry, windy</div><div class="precip">0%</div></div>
+        <div class="fc"><div class="day">Wed</div><div class="hi">75&deg; <span class="lo">/59&deg;</span></div><div class="cond">Dry, windy</div><div class="precip">0%</div></div>
+        <div class="fc"><div class="day">Thu</div><div class="hi">77&deg; <span class="lo">/58&deg;</span></div><div class="cond">Warm, windy</div><div class="precip">2%</div></div>
+        <div class="fc"><div class="day">Fri</div><div class="hi">75&deg; <span class="lo">/53&deg;</span></div><div class="cond">Clear, breezy</div><div class="precip">0%</div></div>
       </div>
       <div class="read">
-        <p><span class="label">Tue</span> Warm at 84 and dry at 2 percent, but honking 18 mph. Tuck into sheltered seams out of the gusts and it fishes fine.</p>
-        <p><span class="label">Wed</span> Cools to 73, still dry at 2 percent, wind holds near 18. Find a wind break and work it.</p>
-        <p><span class="label">Thu</span> Bone dry at 0 percent, 74 with the breeze still up near 17. Open water fishes clean, just keep fighting the wind.</p>
+        <p><span class="label">Wed</span> Bone dry at 0 percent and 75, but honking 17 mph. Tuck into sheltered seams out of the gusts and it fishes fine.</p>
+        <p><span class="label">Thu</span> Warms to 77, still basically dry at 2 percent, wind holds near 17. Find a wind break and work it.</p>
+        <p><span class="label">Fri</span> Clears off to a clean 75 at 0 percent, breeze eases to 14. Best sky of the three, just keep fighting the wind.</p>
       </div>
     </div>
 
     <div class="card">
       <div class="card-head">
         <div>
-          <div class="loc-name">North Bend, WA (stale)</div>
+          <div class="loc-name">North Bend, WA</div>
           <div class="loc-sub">Middle Fork Snoqualmie</div>
         </div>
         <span class="badge go">Go</span>
       </div>
       <div class="forecast-row">
-        <div class="fc"><div class="day">Tue</div><div class="hi">78&deg; <span class="lo">/57&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">3%</div></div>
-        <div class="fc"><div class="day">Wed</div><div class="hi">71&deg; <span class="lo">/58&deg;</span></div><div class="cond">Overcast, damp</div><div class="precip">13%</div></div>
-        <div class="fc"><div class="day">Thu</div><div class="hi">75&deg; <span class="lo">/52&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">6%</div></div>
+        <div class="fc"><div class="day">Wed</div><div class="hi">72&deg; <span class="lo">/56&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">5%</div></div>
+        <div class="fc"><div class="day">Thu</div><div class="hi">74&deg; <span class="lo">/54&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">5%</div></div>
+        <div class="fc"><div class="day">Fri</div><div class="hi">72&deg; <span class="lo">/53&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">1%</div></div>
       </div>
       <div class="read">
-        <p><span class="label">Tue</span> Warm 78 with 3 percent on a calm 8 mph wind. Middle Fork is clean, fish it.</p>
-        <p><span class="label">Wed</span> Cools to 71 and odds climb to 13 percent, wind soft at 7. On the edge but still overcast and workable, go before it fills in.</p>
-        <p><span class="label">Thu</span> Back to 75 and dry at 6 percent on a near-calm 6 mph. Clean window again, get on it.</p>
+        <p><span class="label">Wed</span> Mild 72 with 5 percent on a calm 8 mph wind. Middle Fork is clean, fish it.</p>
+        <p><span class="label">Thu</span> Nudges to 74, still dry at 5 percent, wind soft at 7. Best window of the stretch, get on it.</p>
+        <p><span class="label">Fri</span> Holds 72 and dries out to 1 percent on a near-calm 6 mph. Clean day again under the gray.</p>
       </div>
     </div>
 
     <div class="card">
       <div class="card-head">
         <div>
-          <div class="loc-name">Skykomish, WA (stale)</div>
+          <div class="loc-name">Skykomish, WA</div>
           <div class="loc-sub">Skykomish town / river corridor</div>
         </div>
         <span class="badge go">Go</span>
       </div>
       <div class="forecast-row">
-        <div class="fc"><div class="day">Tue</div><div class="hi">80&deg; <span class="lo">/61&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">1%</div></div>
-        <div class="fc"><div class="day">Wed</div><div class="hi">70&deg; <span class="lo">/58&deg;</span></div><div class="cond">Overcast, cooler</div><div class="precip">6%</div></div>
-        <div class="fc"><div class="day">Thu</div><div class="hi">72&deg; <span class="lo">/54&deg;</span></div><div class="cond">Morning fog</div><div class="precip">0%</div></div>
+        <div class="fc"><div class="day">Wed</div><div class="hi">72&deg; <span class="lo">/57&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">2%</div></div>
+        <div class="fc"><div class="day">Thu</div><div class="hi">73&deg; <span class="lo">/54&deg;</span></div><div class="cond">Overcast, dry</div><div class="precip">2%</div></div>
+        <div class="fc"><div class="day">Fri</div><div class="hi">71&deg; <span class="lo">/51&deg;</span></div><div class="cond">Morning fog</div><div class="precip">2%</div></div>
       </div>
       <div class="read">
-        <p><span class="label">Tue</span> Warm 80 and bone dry at 1 percent on an 11 mph wind. Clean window in the corridor, fish it.</p>
-        <p><span class="label">Wed</span> Cools to 70 with a soft 6 percent, wind near 12. Still dry enough, keep working it.</p>
-        <p><span class="label">Thu</span> Morning fog burns off to 72 and 0 percent on a light 7 mph. Wait for the fog to lift, then it fishes clean.</p>
+        <p><span class="label">Wed</span> Mild 72 and bone dry at 2 percent on an 11 mph wind. Clean window in the corridor, fish it.</p>
+        <p><span class="label">Thu</span> Holds 73 at 2 percent, wind near 11. Still dry, keep working it.</p>
+        <p><span class="label">Fri</span> Morning fog then 71 and 2 percent on a light 6 mph. Wait for the fog to lift, then it fishes clean.</p>
       </div>
     </div>
 
     <h2>Less frequent</h2>
 
     <details>
-      <summary><strong>Avery, ID (stale)</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#6fd485">Warm and dry, low-to-mid 80s</span></summary>
+      <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#6fd485">Warm and dry, low-to-mid 80s</span></summary>
       <div class="inner">
         <div class="forecast-row">
-          <div class="fc"><div class="day">Tue</div><div class="hi">85&deg; <span class="lo">/59&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">1%</div></div>
-          <div class="fc"><div class="day">Wed</div><div class="hi">83&deg; <span class="lo">/63&deg;</span></div><div class="cond">Warm, overcast</div><div class="precip">3%</div></div>
-          <div class="fc"><div class="day">Thu</div><div class="hi">80&deg; <span class="lo">/54&deg;</span></div><div class="cond">Warm, dry</div><div class="precip">0%</div></div>
+          <div class="fc"><div class="day">Wed</div><div class="hi">84&deg; <span class="lo">/64&deg;</span></div><div class="cond">Warm, overcast</div><div class="precip">2%</div></div>
+          <div class="fc"><div class="day">Thu</div><div class="hi">82&deg; <span class="lo">/61&deg;</span></div><div class="cond">Warm, dry</div><div class="precip">0%</div></div>
+          <div class="fc"><div class="day">Fri</div><div class="hi">84&deg; <span class="lo">/54&deg;</span></div><div class="cond">Clear, warm</div><div class="precip">0%</div></div>
         </div>
         <div class="read">
-          <p>The St. Joe is warm and dry all stretch. Today is the pick, mostly sunny and 85 with just 1 percent and a dead-calm 4 mph wind. Wednesday holds warm at 83 under a ceiling, and Thursday backs to 80 and bone dry. Any day out here fishes, but if you want the drive, Tuesday is the cleanest sky.</p>
+          <p>The St. Joe is warm and dry all stretch. Wednesday runs 84 under a ceiling at just 2 percent on a light 10 mph wind. Thursday backs to 82 and bone dry, then Friday clears to a clean 84. Any day out here fishes; if you want the bluebird sky, Friday is the pick.</p>
         </div>
       </div>
     </details>
 
     <details>
-      <summary><strong>Riggins, ID (stale)</strong> &middot; Salmon River corridor &middot; <span style="color:#6fd485">Hot and dry, 90s</span></summary>
+      <summary><strong>Riggins, ID</strong> &middot; Salmon River corridor &middot; <span style="color:#6fd485">Hot and dry, mid-90s</span></summary>
       <div class="inner">
         <div class="forecast-row">
-          <div class="fc"><div class="day">Tue</div><div class="hi">97&deg; <span class="lo">/62&deg;</span></div><div class="cond">Hot, overcast</div><div class="precip">2%</div></div>
-          <div class="fc"><div class="day">Wed</div><div class="hi">93&deg; <span class="lo">/73&deg;</span></div><div class="cond">Hot, breezy</div><div class="precip">3%</div></div>
-          <div class="fc"><div class="day">Thu</div><div class="hi">90&deg; <span class="lo">/62&deg;</span></div><div class="cond">Hot, clear</div><div class="precip">0%</div></div>
+          <div class="fc"><div class="day">Wed</div><div class="hi">97&deg; <span class="lo">/72&deg;</span></div><div class="cond">Hot, part cloud</div><div class="precip">4%</div></div>
+          <div class="fc"><div class="day">Thu</div><div class="hi">94&deg; <span class="lo">/70&deg;</span></div><div class="cond">Hot, overcast</div><div class="precip">0%</div></div>
+          <div class="fc"><div class="day">Fri</div><div class="hi">96&deg; <span class="lo">/63&deg;</span></div><div class="cond">Hot, clear</div><div class="precip">5%</div></div>
         </div>
         <div class="read">
-          <p>Hot and dry the whole stretch. Today tops out at a scorching 97 but bone dry at 2 percent. Wednesday holds 93 with a stiffer 16 mph breeze, and Thursday clears to a clean 90. The Salmon corridor fishes well, but the heat is the story: get on it at first light, clear out by mid-day, and pack more water than you think you need.</p>
+          <p>Hot and dry the whole stretch. Wednesday tops out at a scorching 97 but basically dry at 4 percent on a stiff 16 mph breeze. Thursday backs to 94 under a ceiling, and Friday clears to a clean 96. The Salmon corridor fishes well, but the heat is the story: get on it at first light, clear out by mid-day, and pack more water than you think you need.</p>
         </div>
       </div>
     </details>
 
     <details>
-      <summary><strong>Blue Ridge, GA (stale)</strong> &middot; Toccoa corridor &middot; <span style="color:#e4b961">Hot 80s, rain builds to Thursday</span></summary>
+      <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#ef8484">Clean Wed, heavy rain Thu, storms Fri</span></summary>
       <div class="inner">
         <div class="forecast-row">
-          <div class="fc"><div class="day">Tue</div><div class="hi">86&deg; <span class="lo">/69&deg;</span></div><div class="cond">Hot, humid, fog</div><div class="precip">15%</div></div>
-          <div class="fc"><div class="day">Wed</div><div class="hi">87&deg; <span class="lo">/72&deg;</span></div><div class="cond">Hot, overcast</div><div class="precip">21%</div></div>
-          <div class="fc"><div class="day">Thu</div><div class="hi">88&deg; <span class="lo">/67&deg;</span></div><div class="cond">Hot, drizzle</div><div class="precip">49%</div></div>
+          <div class="fc"><div class="day">Wed</div><div class="hi">87&deg; <span class="lo">/68&deg;</span></div><div class="cond">Hot, mostly sunny</div><div class="precip">13%</div></div>
+          <div class="fc"><div class="day">Thu</div><div class="hi">83&deg; <span class="lo">/70&deg;</span></div><div class="cond">Heavy rain</div><div class="precip">54%</div></div>
+          <div class="fc"><div class="day">Fri</div><div class="hi">90&deg; <span class="lo">/67&deg;</span></div><div class="cond">Thunderstorms</div><div class="precip">54%</div></div>
         </div>
         <div class="read">
-          <p>Hot and humid all stretch with rain building. Today is the cleanest, 86 with morning fog and just 15 percent, fish it early before the swelter. Wednesday holds 87 with odds up to 21 percent. Thursday is the wet one, 88 and drizzle coverage near 49 percent. Same play early in the week: hit the Toccoa at first light and clear out before the afternoon fills in, and plan around the Thursday rain.</p>
+          <p>Wednesday is the day, plain and simple: 87 and mostly sunny at just 13 percent, so hit the Toccoa early before the swelter and get your fishing in. Thursday turns wet, 83 with heavy rain near 54 percent. Friday is the one to sit out, 90 and thunderstorms at 54 percent with lightning in play, so stay off the water when it lights up. Front-load the week and plan around the Thursday-Friday mess.</p>
         </div>
       </div>
     </details>
@@ -557,7 +553,7 @@
   </div>
 
   <footer>
-    Forecast source: Open-Meteo via the weather-forecast GitHub Action, built 2026-07-07 03:49 PT. Surface front maps: NOAA Weather Prediction Center (live, ~3-hourly). Forecasts are predictions, not guarantees. Always check actual conditions before heading out.</footer>
+    Forecast source: Open-Meteo via the weather-forecast GitHub Action, built 2026-07-08 03:10 PT. Surface front maps: NOAA Weather Prediction Center (live, ~3-hourly). Forecasts are predictions, not guarantees. Always check actual conditions before heading out.</footer>
 </div>
 
 <div id="lightbox" onclick="this.style.display='none'">

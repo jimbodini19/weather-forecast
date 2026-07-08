@@ -294,7 +294,7 @@
   <header style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
     <div>
       <h1>Weather forecast</h1>
-      <div class="sub">Tuesday, July 7, 2026 &middot; refreshes daily</div>
+      <div class="sub">Wednesday, July 8, 2026 &middot; refreshes daily &middot; <span style="color:#e4b961;">data stale, last built Jul 7</span></div>
     </div>
     <a href="https://jimbodini19.github.io/weather-forecast/" target="_blank" rel="noopener" style="color:#4dd0e1; text-decoration:none; font-size:13px; font-weight:600; white-space:nowrap; flex-shrink:0; margin-top:6px;">Open page &#8599;</a>
   </header>
@@ -307,8 +307,12 @@
   <!-- ============ FORECAST TAB ============ -->
   <div class="tab-panel active" id="tab-forecast" role="tabpanel">
 
+    <div class="lead" style="border-left-color:#e4b961;">
+      <strong style="color:#e4b961;">Heads up (stale):</strong> The overnight data build did not run for Jul 8, so these numbers are held over from the Jul 7 forecast (day 0 below is Tue Jul 7, not today). Treat them as a day behind and check the GitHub Action if this repeats: github.com/jimbodini19/weather-forecast/actions.
+    </div>
+
     <div class="lead">
-      <strong>Next 3 days:</strong> West-side sits under a soft gray overcast lid the whole stretch, but it stays dry and mild -- Woodinville and the Snoqualmie/Sky spots all run low single-digit to mid-teen precip with highs in the 70s. Today (Tue) is the warmest west-side day before a small midweek cooldown Wednesday, then it nudges back up Thursday. East of the crest, Cle Elum is dry but honking wind near 18 mph all three days. Idaho is the warm-and-dry play: Avery in the low-to-mid 80s, Riggins hot in the 90s and clean. Best all-around outdoor days are Tuesday and Thursday west of the crest, dry and warm under the ceiling. Blue Ridge GA is the outlier, hot and humid in the upper 80s with rain building to near 50 percent by Thursday.
+      <strong>Next 3 days (stale):</strong> West-side sits under a soft gray overcast lid the whole stretch, but it stays dry and mild -- Woodinville and the Snoqualmie/Sky spots all run low single-digit to mid-teen precip with highs in the 70s. Today (Tue) is the warmest west-side day before a small midweek cooldown Wednesday, then it nudges back up Thursday. East of the crest, Cle Elum is dry but honking wind near 18 mph all three days. Idaho is the warm-and-dry play: Avery in the low-to-mid 80s, Riggins hot in the 90s and clean. Best all-around outdoor days are Tuesday and Thursday west of the crest, dry and warm under the ceiling. Blue Ridge GA is the outlier, hot and humid in the upper 80s with rain building to near 50 percent by Thursday.
     </div>
 
     <h2>Home base</h2>
@@ -316,7 +320,7 @@
     <div class="card home">
       <div class="card-head">
         <div>
-          <div class="loc-name">Woodinville</div>
+          <div class="loc-name">Woodinville (stale)</div>
           <div class="loc-sub">Home outdoor / scouting / general</div>
         </div>
         <span class="badge home">Home</span>
@@ -338,7 +342,7 @@
     <div class="card">
       <div class="card-head">
         <div>
-          <div class="loc-name">Cle Elum, WA</div>
+          <div class="loc-name">Cle Elum, WA (stale)</div>
           <div class="loc-sub">Upper Yakima &middot; canyon east</div>
         </div>
         <span class="badge go">Go</span>
@@ -358,7 +362,7 @@
     <div class="card">
       <div class="card-head">
         <div>
-          <div class="loc-name">North Bend, WA</div>
+          <div class="loc-name">North Bend, WA (stale)</div>
           <div class="loc-sub">Middle Fork Snoqualmie</div>
         </div>
         <span class="badge go">Go</span>
@@ -378,7 +382,7 @@
     <div class="card">
       <div class="card-head">
         <div>
-          <div class="loc-name">Skykomish, WA</div>
+          <div class="loc-name">Skykomish, WA (stale)</div>
           <div class="loc-sub">Skykomish town / river corridor</div>
         </div>
         <span class="badge go">Go</span>
@@ -398,7 +402,7 @@
     <h2>Less frequent</h2>
 
     <details>
-      <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#6fd485">Warm and dry, low-to-mid 80s</span></summary>
+      <summary><strong>Avery, ID (stale)</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#6fd485">Warm and dry, low-to-mid 80s</span></summary>
       <div class="inner">
         <div class="forecast-row">
           <div class="fc"><div class="day">Tue</div><div class="hi">85&deg; <span class="lo">/59&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">1%</div></div>
@@ -412,7 +416,7 @@
     </details>
 
     <details>
-      <summary><strong>Riggins, ID</strong> &middot; Salmon River corridor &middot; <span style="color:#6fd485">Hot and dry, 90s</span></summary>
+      <summary><strong>Riggins, ID (stale)</strong> &middot; Salmon River corridor &middot; <span style="color:#6fd485">Hot and dry, 90s</span></summary>
       <div class="inner">
         <div class="forecast-row">
           <div class="fc"><div class="day">Tue</div><div class="hi">97&deg; <span class="lo">/62&deg;</span></div><div class="cond">Hot, overcast</div><div class="precip">2%</div></div>
@@ -426,7 +430,7 @@
     </details>
 
     <details>
-      <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#e4b961">Hot 80s, rain builds to Thursday</span></summary>
+      <summary><strong>Blue Ridge, GA (stale)</strong> &middot; Toccoa corridor &middot; <span style="color:#e4b961">Hot 80s, rain builds to Thursday</span></summary>
       <div class="inner">
         <div class="forecast-row">
           <div class="fc"><div class="day">Tue</div><div class="hi">86&deg; <span class="lo">/69&deg;</span></div><div class="cond">Hot, humid, fog</div><div class="precip">15%</div></div>

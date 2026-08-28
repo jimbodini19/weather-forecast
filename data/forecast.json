@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-08-27T18:41:23Z",
-  "generated_at_pt": "2026-08-27 11:41 PT",
+  "generated_at_utc": "2026-08-28T19:48:32Z",
+  "generated_at_pt": "2026-08-28 12:48 PT",
   "source": "Open-Meteo (api.open-meteo.com), WMO weather codes",
   "locations": {
     "woodinville": {
@@ -12,36 +12,36 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-08-27",
-          "dow": "Thu",
-          "hi": 74,
-          "lo": 61,
-          "precip": 6,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 12
-        },
-        {
           "date": "2026-08-28",
           "dow": "Fri",
-          "hi": 70,
-          "lo": 57,
-          "precip": 34,
+          "hi": 72,
+          "lo": 56,
+          "precip": 11,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 10
+          "wind_mph": 9
         },
         {
           "date": "2026-08-29",
           "dow": "Sat",
-          "hi": 64,
-          "lo": 52,
-          "precip": 77,
-          "code": 80,
-          "condition": "Rain showers",
+          "hi": 65,
+          "lo": 54,
+          "precip": 57,
+          "code": 61,
+          "condition": "Light rain",
           "category": "rain",
+          "wind_mph": 6
+        },
+        {
+          "date": "2026-08-30",
+          "dow": "Sun",
+          "hi": 62,
+          "lo": 54,
+          "precip": 9,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
           "wind_mph": 6
         }
       ],
@@ -56,37 +56,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-08-27",
-          "dow": "Thu",
-          "hi": 73,
-          "lo": 57,
+          "date": "2026-08-28",
+          "dow": "Fri",
+          "hi": 72,
+          "lo": 56,
           "precip": 0,
           "code": 45,
           "condition": "Fog",
-          "category": "cloud",
-          "wind_mph": 17
-        },
-        {
-          "date": "2026-08-28",
-          "dow": "Fri",
-          "hi": 70,
-          "lo": 53,
-          "precip": 0,
-          "code": 3,
-          "condition": "Overcast",
           "category": "cloud",
           "wind_mph": 15
         },
         {
           "date": "2026-08-29",
           "dow": "Sat",
-          "hi": 66,
-          "lo": 51,
-          "precip": 3,
+          "hi": 62,
+          "lo": 50,
+          "precip": 8,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 16
+          "wind_mph": 17
+        },
+        {
+          "date": "2026-08-30",
+          "dow": "Sun",
+          "hi": 68,
+          "lo": 46,
+          "precip": 2,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 12
         }
       ],
       "utc_offset_seconds": -25200
@@ -100,37 +100,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-08-27",
-          "dow": "Thu",
-          "hi": 76,
-          "lo": 58,
-          "precip": 7,
+          "date": "2026-08-28",
+          "dow": "Fri",
+          "hi": 72,
+          "lo": 59,
+          "precip": 13,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
           "wind_mph": 8
         },
         {
-          "date": "2026-08-28",
-          "dow": "Fri",
-          "hi": 73,
-          "lo": 58,
-          "precip": 25,
+          "date": "2026-08-29",
+          "dow": "Sat",
+          "hi": 64,
+          "lo": 54,
+          "precip": 49,
+          "code": 61,
+          "condition": "Light rain",
+          "category": "rain",
+          "wind_mph": 6
+        },
+        {
+          "date": "2026-08-30",
+          "dow": "Sun",
+          "hi": 65,
+          "lo": 54,
+          "precip": 18,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 10
-        },
-        {
-          "date": "2026-08-29",
-          "dow": "Sat",
-          "hi": 63,
-          "lo": 54,
-          "precip": 73,
-          "code": 80,
-          "condition": "Rain showers",
-          "category": "rain",
-          "wind_mph": 7
+          "wind_mph": 5
         }
       ],
       "utc_offset_seconds": -25200
@@ -144,37 +144,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-08-27",
-          "dow": "Thu",
-          "hi": 73,
-          "lo": 57,
-          "precip": 7,
+          "date": "2026-08-28",
+          "dow": "Fri",
+          "hi": 71,
+          "lo": 58,
+          "precip": 2,
           "code": 45,
           "condition": "Fog",
           "category": "cloud",
           "wind_mph": 10
         },
         {
-          "date": "2026-08-28",
-          "dow": "Fri",
-          "hi": 70,
-          "lo": 55,
-          "precip": 10,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 9
-        },
-        {
           "date": "2026-08-29",
           "dow": "Sat",
-          "hi": 59,
-          "lo": 54,
-          "precip": 67,
-          "code": 81,
-          "condition": "Rain showers",
+          "hi": 61,
+          "lo": 53,
+          "precip": 57,
+          "code": 63,
+          "condition": "Rain",
           "category": "rain",
-          "wind_mph": 6
+          "wind_mph": 11
+        },
+        {
+          "date": "2026-08-30",
+          "dow": "Sun",
+          "hi": 63,
+          "lo": 52,
+          "precip": 27,
+          "code": 51,
+          "condition": "Light drizzle",
+          "category": "rain",
+          "wind_mph": 5
         }
       ],
       "utc_offset_seconds": -25200
@@ -188,37 +188,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-08-27",
-          "dow": "Thu",
-          "hi": 86,
-          "lo": 64,
-          "precip": 4,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 11
-        },
-        {
           "date": "2026-08-28",
           "dow": "Fri",
-          "hi": 80,
-          "lo": 58,
-          "precip": 4,
-          "code": 1,
-          "condition": "Mostly sunny",
+          "hi": 81,
+          "lo": 59,
+          "precip": 0,
+          "code": 0,
+          "condition": "Clear",
           "category": "clear",
           "wind_mph": 10
         },
         {
           "date": "2026-08-29",
           "dow": "Sat",
-          "hi": 73,
-          "lo": 52,
-          "precip": 21,
+          "hi": 71,
+          "lo": 53,
+          "precip": 7,
+          "code": 1,
+          "condition": "Mostly sunny",
+          "category": "clear",
+          "wind_mph": 13
+        },
+        {
+          "date": "2026-08-30",
+          "dow": "Sun",
+          "hi": 69,
+          "lo": 43,
+          "precip": 6,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 11
+          "wind_mph": 12
         }
       ],
       "utc_offset_seconds": -25200
@@ -232,37 +232,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-08-27",
-          "dow": "Thu",
-          "hi": 98,
-          "lo": 68,
-          "precip": 1,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 16
-        },
-        {
           "date": "2026-08-28",
           "dow": "Fri",
           "hi": 95,
-          "lo": 66,
-          "precip": 10,
-          "code": 51,
-          "condition": "Light drizzle",
-          "category": "rain",
-          "wind_mph": 12
+          "lo": 63,
+          "precip": 2,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 13
         },
         {
           "date": "2026-08-29",
           "dow": "Sat",
-          "hi": 83,
-          "lo": 60,
-          "precip": 56,
-          "code": 53,
-          "condition": "Drizzle",
-          "category": "rain",
-          "wind_mph": 8
+          "hi": 86,
+          "lo": 63,
+          "precip": 10,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 13
+        },
+        {
+          "date": "2026-08-30",
+          "dow": "Sun",
+          "hi": 82,
+          "lo": 51,
+          "precip": 32,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 6
         }
       ],
       "utc_offset_seconds": -21600
@@ -276,37 +276,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-08-27",
-          "dow": "Thu",
-          "hi": 83,
-          "lo": 67,
-          "precip": 25,
-          "code": 63,
-          "condition": "Rain",
-          "category": "rain",
-          "wind_mph": 10
-        },
-        {
           "date": "2026-08-28",
           "dow": "Fri",
           "hi": 86,
-          "lo": 68,
-          "precip": 9,
-          "code": 3,
-          "condition": "Overcast",
+          "lo": 66,
+          "precip": 20,
+          "code": 45,
+          "condition": "Fog",
           "category": "cloud",
-          "wind_mph": 9
+          "wind_mph": 7
         },
         {
           "date": "2026-08-29",
           "dow": "Sat",
-          "hi": 89,
+          "hi": 85,
+          "lo": 67,
+          "precip": 15,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-08-30",
+          "dow": "Sun",
+          "hi": 80,
           "lo": 66,
-          "precip": 48,
-          "code": 51,
-          "condition": "Light drizzle",
-          "category": "rain",
-          "wind_mph": 8
+          "precip": 38,
+          "code": 95,
+          "condition": "Thunderstorms",
+          "category": "storm",
+          "wind_mph": 5
         }
       ],
       "utc_offset_seconds": -14400

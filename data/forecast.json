@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-05T11:30:38Z",
-  "generated_at_pt": "2026-09-05 04:30 PT",
+  "generated_at_utc": "2026-09-06T11:51:35Z",
+  "generated_at_pt": "2026-09-06 04:51 PT",
   "source": "Open-Meteo (api.open-meteo.com), WMO weather codes",
   "locations": {
     "woodinville": {
@@ -9,43 +9,9 @@
       "lat": 47.7462,
       "lon": -122.1119,
       "home": true,
-      "ok": true,
-      "days": [
-        {
-          "date": "2026-09-05",
-          "dow": "Sat",
-          "hi": 72,
-          "lo": 52,
-          "precip": 18,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 17
-        },
-        {
-          "date": "2026-09-06",
-          "dow": "Sun",
-          "hi": 73,
-          "lo": 49,
-          "precip": 2,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 7
-        },
-        {
-          "date": "2026-09-07",
-          "dow": "Mon",
-          "hi": 63,
-          "lo": 47,
-          "precip": 2,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 8
-        }
-      ],
-      "utc_offset_seconds": -25200
+      "ok": false,
+      "days": [],
+      "error": "TimeoutError: The read operation timed out"
     },
     "cle_elum": {
       "name": "Cle Elum, WA",
@@ -53,43 +19,9 @@
       "lat": 47.1954,
       "lon": -120.9395,
       "home": false,
-      "ok": true,
-      "days": [
-        {
-          "date": "2026-09-05",
-          "dow": "Sat",
-          "hi": 69,
-          "lo": 46,
-          "precip": 21,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 10
-        },
-        {
-          "date": "2026-09-06",
-          "dow": "Sun",
-          "hi": 71,
-          "lo": 50,
-          "precip": 26,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 12
-        },
-        {
-          "date": "2026-09-07",
-          "dow": "Mon",
-          "hi": 71,
-          "lo": 50,
-          "precip": 11,
-          "code": 0,
-          "condition": "Clear",
-          "category": "clear",
-          "wind_mph": 14
-        }
-      ],
-      "utc_offset_seconds": -25200
+      "ok": false,
+      "days": [],
+      "error": "TimeoutError: The read operation timed out"
     },
     "north_bend": {
       "name": "North Bend, WA",
@@ -97,43 +29,9 @@
       "lat": 47.4935,
       "lon": -121.7831,
       "home": false,
-      "ok": true,
-      "days": [
-        {
-          "date": "2026-09-05",
-          "dow": "Sat",
-          "hi": 72,
-          "lo": 53,
-          "precip": 36,
-          "code": 63,
-          "condition": "Rain",
-          "category": "rain",
-          "wind_mph": 8
-        },
-        {
-          "date": "2026-09-06",
-          "dow": "Sun",
-          "hi": 74,
-          "lo": 53,
-          "precip": 7,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 8
-        },
-        {
-          "date": "2026-09-07",
-          "dow": "Mon",
-          "hi": 63,
-          "lo": 50,
-          "precip": 11,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 5
-        }
-      ],
-      "utc_offset_seconds": -25200
+      "ok": false,
+      "days": [],
+      "error": "URLError: <urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     "skykomish": {
       "name": "Skykomish, WA",
@@ -141,43 +39,9 @@
       "lat": 47.7094,
       "lon": -121.359,
       "home": false,
-      "ok": true,
-      "days": [
-        {
-          "date": "2026-09-05",
-          "dow": "Sat",
-          "hi": 71,
-          "lo": 53,
-          "precip": 50,
-          "code": 63,
-          "condition": "Rain",
-          "category": "rain",
-          "wind_mph": 11
-        },
-        {
-          "date": "2026-09-06",
-          "dow": "Sun",
-          "hi": 72,
-          "lo": 54,
-          "precip": 9,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 10
-        },
-        {
-          "date": "2026-09-07",
-          "dow": "Mon",
-          "hi": 69,
-          "lo": 49,
-          "precip": 7,
-          "code": 2,
-          "condition": "Partly cloudy",
-          "category": "cloud",
-          "wind_mph": 7
-        }
-      ],
-      "utc_offset_seconds": -25200
+      "ok": false,
+      "days": [],
+      "error": "URLError: <urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     "avery": {
       "name": "Avery, ID",
@@ -188,36 +52,36 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-09-05",
-          "dow": "Sat",
-          "hi": 72,
-          "lo": 48,
-          "precip": 8,
-          "code": 1,
-          "condition": "Mostly sunny",
-          "category": "clear",
-          "wind_mph": 6
-        },
-        {
           "date": "2026-09-06",
           "dow": "Sun",
           "hi": 77,
-          "lo": 53,
-          "precip": 60,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 8
+          "lo": 52,
+          "precip": 39,
+          "code": 65,
+          "condition": "Heavy rain",
+          "category": "rain",
+          "wind_mph": 16
         },
         {
           "date": "2026-09-07",
           "dow": "Mon",
-          "hi": 64,
-          "lo": 51,
-          "precip": 84,
-          "code": 53,
-          "condition": "Drizzle",
+          "hi": 55,
+          "lo": 49,
+          "precip": 81,
+          "code": 61,
+          "condition": "Light rain",
           "category": "rain",
+          "wind_mph": 9
+        },
+        {
+          "date": "2026-09-08",
+          "dow": "Tue",
+          "hi": 69,
+          "lo": 46,
+          "precip": 33,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
           "wind_mph": 7
         }
       ],
@@ -229,43 +93,9 @@
       "lat": 45.4146,
       "lon": -116.3162,
       "home": false,
-      "ok": true,
-      "days": [
-        {
-          "date": "2026-09-05",
-          "dow": "Sat",
-          "hi": 80,
-          "lo": 52,
-          "precip": 3,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 10
-        },
-        {
-          "date": "2026-09-06",
-          "dow": "Sun",
-          "hi": 85,
-          "lo": 55,
-          "precip": 50,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 13
-        },
-        {
-          "date": "2026-09-07",
-          "dow": "Mon",
-          "hi": 67,
-          "lo": 55,
-          "precip": 95,
-          "code": 81,
-          "condition": "Rain showers",
-          "category": "rain",
-          "wind_mph": 7
-        }
-      ],
-      "utc_offset_seconds": -21600
+      "ok": false,
+      "days": [],
+      "error": "TimeoutError: The read operation timed out"
     },
     "blue_ridge": {
       "name": "Blue Ridge, GA",
@@ -276,37 +106,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-09-05",
-          "dow": "Sat",
-          "hi": 94,
-          "lo": 70,
-          "precip": 7,
-          "code": 45,
-          "condition": "Fog",
+          "date": "2026-09-06",
+          "dow": "Sun",
+          "hi": 90,
+          "lo": 69,
+          "precip": 9,
+          "code": 3,
+          "condition": "Overcast",
           "category": "cloud",
           "wind_mph": 8
         },
         {
-          "date": "2026-09-06",
-          "dow": "Sun",
-          "hi": 94,
-          "lo": 75,
-          "precip": 11,
-          "code": 61,
-          "condition": "Light rain",
-          "category": "rain",
-          "wind_mph": 10
-        },
-        {
           "date": "2026-09-07",
           "dow": "Mon",
-          "hi": 82,
-          "lo": 66,
-          "precip": 12,
+          "hi": 84,
+          "lo": 69,
+          "precip": 13,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
           "wind_mph": 12
+        },
+        {
+          "date": "2026-09-08",
+          "dow": "Tue",
+          "hi": 82,
+          "lo": 62,
+          "precip": 1,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 10
         }
       ],
       "utc_offset_seconds": -14400

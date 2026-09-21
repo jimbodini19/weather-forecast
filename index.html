@@ -294,7 +294,7 @@
   <header style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
     <div>
       <h1>Weather forecast</h1>
-      <div class="sub">Sunday, September 20, 2026 &middot; next 3 days &middot; built 05:46 PT</div>
+      <div class="sub">Monday, September 21, 2026 &middot; next 3 days &middot; data stale, last built Sun 05:46 PT</div>
     </div>
     <a href="https://jimbodini19.github.io/weather-forecast/" target="_blank" rel="noopener" style="color:#4dd0e1; text-decoration:none; font-size:13px; font-weight:600; white-space:nowrap; flex-shrink:0; margin-top:6px;">Open page &#8599;</a>
   </header>
@@ -306,8 +306,11 @@
 
   <!-- ============ FORECAST TAB ============ -->
   <div class="tab-panel active" id="tab-forecast" role="tabpanel">
+    <div class="lead" style="border-left-color:#d29922; background:#1c1a12; color:#e4c96b;">
+<strong style="color:#f0d98a;">Data stale.</strong> The GitHub Action did not commit fresh weather data this morning, so the tiles below are yesterday's numbers (Sun/Mon/Tue built Sun 05:46 PT). What reads as "Sunday" was today when it was built and is now yesterday. Treat every number as one day behind and verify actual conditions before heading out. Check the run at <a href="https://github.com/jimbodini19/weather-forecast/actions" target="_blank" rel="noopener" style="color:#4dd0e1; text-decoration:none;">weather-forecast Actions</a>.
+    </div>
     <div class="lead">
-<strong>Next 3 days:</strong> Today is the day. The whole west side runs clear and mild Sunday, then a cloud deck slides in Monday and the first light drizzle nudges in by Tuesday. Woodinville sits 73 clear today off a cool 46, Skykomish and Cle Elum both touch 81, and everything stays dry through Monday before Tuesday cools and dampens. East of the crest Cle Elum is warm in the low 80s Sunday and Monday but stiffens to a 15 to 16 wind, so tuck out of it. Idaho is hot and dry: Avery into the low 80s, Riggins scorching near 90 Monday. Blue Ridge GA stays hot in the upper 80s with rain building to a Tuesday thunderstorm. Bottom line: get out today while it's clear, Monday still fishes gray and dry, and Tuesday is the soft day of the run.
+<strong>Next 3 days (stale):</strong> Today is the day. The whole west side runs clear and mild Sunday, then a cloud deck slides in Monday and the first light drizzle nudges in by Tuesday. Woodinville sits 73 clear today off a cool 46, Skykomish and Cle Elum both touch 81, and everything stays dry through Monday before Tuesday cools and dampens. East of the crest Cle Elum is warm in the low 80s Sunday and Monday but stiffens to a 15 to 16 wind, so tuck out of it. Idaho is hot and dry: Avery into the low 80s, Riggins scorching near 90 Monday. Blue Ridge GA stays hot in the upper 80s with rain building to a Tuesday thunderstorm. Bottom line: get out today while it's clear, Monday still fishes gray and dry, and Tuesday is the soft day of the run.
     </div>
 
     <h2>Home base</h2>

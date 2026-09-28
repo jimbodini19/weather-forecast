@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-09-27T13:26:51Z",
-  "generated_at_pt": "2026-09-27 06:26 PT",
+  "generated_at_utc": "2026-09-28T16:19:17Z",
+  "generated_at_pt": "2026-09-28 09:19 PT",
   "source": "Open-Meteo (api.open-meteo.com), WMO weather codes",
   "locations": {
     "woodinville": {
@@ -9,9 +9,43 @@
       "lat": 47.7462,
       "lon": -122.1119,
       "home": true,
-      "ok": false,
-      "days": [],
-      "error": "TimeoutError: The read operation timed out"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-09-28",
+          "dow": "Mon",
+          "hi": 65,
+          "lo": 43,
+          "precip": 14,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-09-29",
+          "dow": "Tue",
+          "hi": 56,
+          "lo": 51,
+          "precip": 82,
+          "code": 63,
+          "condition": "Rain",
+          "category": "rain",
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-09-30",
+          "dow": "Wed",
+          "hi": 64,
+          "lo": 46,
+          "precip": 12,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 7
+        }
+      ],
+      "utc_offset_seconds": -25200
     },
     "cle_elum": {
       "name": "Cle Elum, WA",
@@ -22,22 +56,11 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-09-27",
-          "dow": "Sun",
-          "hi": 65,
-          "lo": 42,
-          "precip": 0,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 9
-        },
-        {
           "date": "2026-09-28",
           "dow": "Mon",
-          "hi": 69,
-          "lo": 44,
-          "precip": 2,
+          "hi": 68,
+          "lo": 39,
+          "precip": 3,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
@@ -46,12 +69,23 @@
         {
           "date": "2026-09-29",
           "dow": "Tue",
-          "hi": 55,
+          "hi": 63,
           "lo": 48,
-          "precip": 52,
-          "code": 53,
-          "condition": "Drizzle",
-          "category": "rain",
+          "precip": 54,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 17
+        },
+        {
+          "date": "2026-09-30",
+          "dow": "Wed",
+          "hi": 65,
+          "lo": 45,
+          "precip": 7,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
           "wind_mph": 10
         }
       ],
@@ -63,9 +97,43 @@
       "lat": 47.4935,
       "lon": -121.7831,
       "home": false,
-      "ok": false,
-      "days": [],
-      "error": "URLError: <urlopen error _ssl.c:993: The handshake operation timed out>"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-09-28",
+          "dow": "Mon",
+          "hi": 67,
+          "lo": 45,
+          "precip": 9,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-09-29",
+          "dow": "Tue",
+          "hi": 59,
+          "lo": 53,
+          "precip": 89,
+          "code": 63,
+          "condition": "Rain",
+          "category": "rain",
+          "wind_mph": 10
+        },
+        {
+          "date": "2026-09-30",
+          "dow": "Wed",
+          "hi": 63,
+          "lo": 46,
+          "precip": 28,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 5
+        }
+      ],
+      "utc_offset_seconds": -25200
     },
     "skykomish": {
       "name": "Skykomish, WA",
@@ -73,9 +141,43 @@
       "lat": 47.7094,
       "lon": -121.359,
       "home": false,
-      "ok": false,
-      "days": [],
-      "error": "TimeoutError: The read operation timed out"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-09-28",
+          "dow": "Mon",
+          "hi": 65,
+          "lo": 47,
+          "precip": 9,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 6
+        },
+        {
+          "date": "2026-09-29",
+          "dow": "Tue",
+          "hi": 57,
+          "lo": 49,
+          "precip": 96,
+          "code": 61,
+          "condition": "Light rain",
+          "category": "rain",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-09-30",
+          "dow": "Wed",
+          "hi": 64,
+          "lo": 43,
+          "precip": 22,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 5
+        }
+      ],
+      "utc_offset_seconds": -25200
     },
     "avery": {
       "name": "Avery, ID",
@@ -83,9 +185,43 @@
       "lat": 47.2505,
       "lon": -115.8124,
       "home": false,
-      "ok": false,
-      "days": [],
-      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-09-28",
+          "dow": "Mon",
+          "hi": 65,
+          "lo": 40,
+          "precip": 0,
+          "code": 0,
+          "condition": "Clear",
+          "category": "clear",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-09-29",
+          "dow": "Tue",
+          "hi": 66,
+          "lo": 46,
+          "precip": 13,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 13
+        },
+        {
+          "date": "2026-09-30",
+          "dow": "Wed",
+          "hi": 63,
+          "lo": 45,
+          "precip": 29,
+          "code": 53,
+          "condition": "Drizzle",
+          "category": "rain",
+          "wind_mph": 9
+        }
+      ],
+      "utc_offset_seconds": -25200
     },
     "riggins": {
       "name": "Riggins, ID",
@@ -93,9 +229,43 @@
       "lat": 45.4146,
       "lon": -116.3162,
       "home": false,
-      "ok": false,
-      "days": [],
-      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-09-28",
+          "dow": "Mon",
+          "hi": 73,
+          "lo": 49,
+          "precip": 2,
+          "code": 1,
+          "condition": "Mostly sunny",
+          "category": "clear",
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-09-29",
+          "dow": "Tue",
+          "hi": 82,
+          "lo": 56,
+          "precip": 5,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 6
+        },
+        {
+          "date": "2026-09-30",
+          "dow": "Wed",
+          "hi": 75,
+          "lo": 54,
+          "precip": 2,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 7
+        }
+      ],
+      "utc_offset_seconds": -21600
     },
     "blue_ridge": {
       "name": "Blue Ridge, GA",
@@ -103,9 +273,43 @@
       "lat": 34.8423,
       "lon": -84.2999,
       "home": false,
-      "ok": false,
-      "days": [],
-      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-09-28",
+          "dow": "Mon",
+          "hi": 77,
+          "lo": 47,
+          "precip": 0,
+          "code": 45,
+          "condition": "Fog",
+          "category": "cloud",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-09-29",
+          "dow": "Tue",
+          "hi": 82,
+          "lo": 56,
+          "precip": 0,
+          "code": 0,
+          "condition": "Clear",
+          "category": "clear",
+          "wind_mph": 6
+        },
+        {
+          "date": "2026-09-30",
+          "dow": "Wed",
+          "hi": 83,
+          "lo": 57,
+          "precip": 0,
+          "code": 2,
+          "condition": "Partly cloudy",
+          "category": "cloud",
+          "wind_mph": 9
+        }
+      ],
+      "utc_offset_seconds": -14400
     }
   }
 }

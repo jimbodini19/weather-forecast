@@ -294,7 +294,7 @@
   <header style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
     <div>
       <h1>Weather forecast</h1>
-      <div class="sub">Next 3 days &middot; Wed Oct 21 to Fri Oct 23 &middot; built 2026-10-21 06:20 PT</div>
+      <div class="sub" style="color:#e4b961">Stale &middot; data from 2026-10-21 06:20 PT, not refreshed by today's run (Thu Oct 22) &middot; covers Wed Oct 21 to Fri Oct 23</div>
     </div>
     <a href="https://jimbodini19.github.io/weather-forecast/" target="_blank" rel="noopener" style="color:#4dd0e1; text-decoration:none; font-size:13px; font-weight:600; white-space:nowrap; flex-shrink:0; margin-top:6px;">Open page &#8599;</a>
   </header>
@@ -307,7 +307,7 @@
   <!-- ============ FORECAST TAB ============ -->
   <div class="tab-panel active" id="tab-forecast" role="tabpanel">
     <div class="lead">
-<strong>Fresh pull. Dry out front, then the rain moves in and clobbers the east.</strong> Wednesday is the day, warm and dry nearly everywhere. West of the crest, Woodinville, North Bend and Skykomish run mild low-70s overcast Wednesday, cool into the upper 50s Thursday, then drop to around 50 Friday with a light drizzle sneaking back in. Nothing that keeps you home, just layer up late week. Cle Elum stays dry all three but the wind honks 14 Thursday and Friday. East in Idaho it is a front-end game: Avery and Riggins run warm-to-hot and dry Wednesday, 72 and 80, then both get soaked Thursday into Friday, Riggins hammered at 93 to 95 percent. Fish Wednesday hard out there and stay off the water the back half. Blue Ridge GA is bluebird all three, fog burning off to clear.
+<strong style="color:#e4b961">Stale data. Today's auto-refresh did not run, so this is yesterday's pull (built Oct 21 06:20 PT). Check the GitHub Action. The forecast below is the last good data, day labels and all, so verify before you head out.</strong> Dry out front Wednesday, then the rain moved in and clobbered the east. Wednesday was the day, warm and dry nearly everywhere. West of the crest, Woodinville, North Bend and Skykomish run mild low-70s overcast Wednesday, cool into the upper 50s Thursday, then drop to around 50 Friday with a light drizzle sneaking back in. Nothing that keeps you home, just layer up late week. Cle Elum stays dry all three but the wind honks 14 Thursday and Friday. East in Idaho it is a front-end game: Avery and Riggins run warm-to-hot and dry Wednesday, 72 and 80, then both get soaked Thursday into Friday, Riggins hammered at 93 to 95 percent. Fish Wednesday hard out there and stay off the water the back half. Blue Ridge GA is bluebird all three, fog burning off to clear.
     </div>
 
     <h2>Home base</h2>
@@ -318,7 +318,7 @@
           <div class="loc-name">Woodinville</div>
           <div class="loc-sub">Home outdoor / scouting / general</div>
         </div>
-        <span class="badge go">Go today</span>
+        <span class="badge go">Go today (stale)</span>
       </div>
       <div class="forecast-row">
         <div class="fc"><div class="day">Wed</div><div class="hi">69&deg; <span class="lo">/41&deg;</span></div><div class="cond">Overcast</div><div class="precip">1%</div></div>
@@ -340,7 +340,7 @@
           <div class="loc-name">Cle Elum, WA</div>
           <div class="loc-sub">Upper Yakima &middot; canyon east</div>
         </div>
-        <span class="badge go">Go</span>
+        <span class="badge go">Go (stale)</span>
       </div>
       <div class="forecast-row">
         <div class="fc"><div class="day">Wed</div><div class="hi">65&deg; <span class="lo">/39&deg;</span></div><div class="cond">Overcast</div><div class="precip">1%</div></div>
@@ -360,7 +360,7 @@
           <div class="loc-name">North Bend, WA</div>
           <div class="loc-sub">Middle Fork Snoqualmie</div>
         </div>
-        <span class="badge go">Go today</span>
+        <span class="badge go">Go today (stale)</span>
       </div>
       <div class="forecast-row">
         <div class="fc"><div class="day">Wed</div><div class="hi">70&deg; <span class="lo">/49&deg;</span></div><div class="cond">Overcast</div><div class="precip">1%</div></div>
@@ -380,7 +380,7 @@
           <div class="loc-name">Skykomish, WA</div>
           <div class="loc-sub">Skykomish town / river corridor</div>
         </div>
-        <span class="badge go">Go today</span>
+        <span class="badge go">Go today (stale)</span>
       </div>
       <div class="forecast-row">
         <div class="fc"><div class="day">Wed</div><div class="hi">72&deg; <span class="lo">/52&deg;</span></div><div class="cond">Overcast</div><div class="precip">1%</div></div>
@@ -397,7 +397,7 @@
     <h2>Less frequent</h2>
 
     <details>
-      <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#e4b961">Bluebird and warm Wednesday, then rain sets in</span></summary>
+      <summary><strong>Avery, ID</strong> &middot; Upper St. Joe corridor &middot; <span style="color:#e4b961">Bluebird and warm Wednesday, then rain sets in (stale)</span></summary>
       <div class="inner">
         <div class="forecast-row">
         <div class="fc"><div class="day">Wed</div><div class="hi">72&deg; <span class="lo">/47&deg;</span></div><div class="cond">Mostly sunny</div><div class="precip">2%</div></div>
@@ -411,7 +411,7 @@
     </details>
 
     <details>
-      <summary><strong>Riggins, ID</strong> &middot; Salmon River corridor &middot; <span style="color:#e4b961">Hot and dry Wednesday, washout Thursday and Friday</span></summary>
+      <summary><strong>Riggins, ID</strong> &middot; Salmon River corridor &middot; <span style="color:#e4b961">Hot and dry Wednesday, washout Thursday and Friday (stale)</span></summary>
       <div class="inner">
         <div class="forecast-row">
         <div class="fc"><div class="day">Wed</div><div class="hi">80&deg; <span class="lo">/50&deg;</span></div><div class="cond">Overcast</div><div class="precip">2%</div></div>
@@ -425,7 +425,7 @@
     </details>
 
     <details>
-      <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#6fd485">Dry and clear all three</span></summary>
+      <summary><strong>Blue Ridge, GA</strong> &middot; Toccoa corridor &middot; <span style="color:#6fd485">Dry and clear all three (stale)</span></summary>
       <div class="inner">
         <div class="forecast-row">
         <div class="fc"><div class="day">Wed</div><div class="hi">71&deg; <span class="lo">/42&deg;</span></div><div class="cond">Fog</div><div class="precip">0%</div></div>

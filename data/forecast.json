@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-24T19:14:42Z",
-  "generated_at_pt": "2026-11-24 12:14 PT",
+  "generated_at_utc": "2026-11-25T18:19:24Z",
+  "generated_at_pt": "2026-11-25 11:19 PT",
   "source": "Open-Meteo (api.open-meteo.com), WMO weather codes",
   "locations": {
     "woodinville": {
@@ -9,9 +9,43 @@
       "lat": 47.7462,
       "lon": -122.1119,
       "home": true,
-      "ok": false,
-      "days": [],
-      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-11-25",
+          "dow": "Wed",
+          "hi": 59,
+          "lo": 51,
+          "precip": 92,
+          "code": 61,
+          "condition": "Light rain",
+          "category": "rain",
+          "wind_mph": 14
+        },
+        {
+          "date": "2026-11-26",
+          "dow": "Thu",
+          "hi": 55,
+          "lo": 47,
+          "precip": 98,
+          "code": 63,
+          "condition": "Rain",
+          "category": "rain",
+          "wind_mph": 16
+        },
+        {
+          "date": "2026-11-27",
+          "dow": "Fri",
+          "hi": 48,
+          "lo": 40,
+          "precip": 85,
+          "code": 63,
+          "condition": "Rain",
+          "category": "rain",
+          "wind_mph": 7
+        }
+      ],
+      "utc_offset_seconds": -28800
     },
     "cle_elum": {
       "name": "Cle Elum, WA",
@@ -19,9 +53,43 @@
       "lat": 47.1954,
       "lon": -120.9395,
       "home": false,
-      "ok": false,
-      "days": [],
-      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-11-25",
+          "dow": "Wed",
+          "hi": 47,
+          "lo": 37,
+          "precip": 40,
+          "code": 53,
+          "condition": "Drizzle",
+          "category": "rain",
+          "wind_mph": 12
+        },
+        {
+          "date": "2026-11-26",
+          "dow": "Thu",
+          "hi": 52,
+          "lo": 42,
+          "precip": 100,
+          "code": 61,
+          "condition": "Light rain",
+          "category": "rain",
+          "wind_mph": 15
+        },
+        {
+          "date": "2026-11-27",
+          "dow": "Fri",
+          "hi": 43,
+          "lo": 38,
+          "precip": 81,
+          "code": 51,
+          "condition": "Light drizzle",
+          "category": "rain",
+          "wind_mph": 8
+        }
+      ],
+      "utc_offset_seconds": -28800
     },
     "north_bend": {
       "name": "North Bend, WA",
@@ -29,9 +97,43 @@
       "lat": 47.4935,
       "lon": -121.7831,
       "home": false,
-      "ok": false,
-      "days": [],
-      "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      "ok": true,
+      "days": [
+        {
+          "date": "2026-11-25",
+          "dow": "Wed",
+          "hi": 58,
+          "lo": 51,
+          "precip": 94,
+          "code": 61,
+          "condition": "Light rain",
+          "category": "rain",
+          "wind_mph": 11
+        },
+        {
+          "date": "2026-11-26",
+          "dow": "Thu",
+          "hi": 56,
+          "lo": 48,
+          "precip": 100,
+          "code": 63,
+          "condition": "Rain",
+          "category": "rain",
+          "wind_mph": 18
+        },
+        {
+          "date": "2026-11-27",
+          "dow": "Fri",
+          "hi": 48,
+          "lo": 44,
+          "precip": 94,
+          "code": 61,
+          "condition": "Light rain",
+          "category": "rain",
+          "wind_mph": 7
+        }
+      ],
+      "utc_offset_seconds": -28800
     },
     "skykomish": {
       "name": "Skykomish, WA",
@@ -42,37 +144,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-11-24",
-          "dow": "Tue",
-          "hi": 52,
-          "lo": 45,
-          "precip": 72,
-          "code": 61,
-          "condition": "Light rain",
-          "category": "rain",
-          "wind_mph": 7
-        },
-        {
           "date": "2026-11-25",
           "dow": "Wed",
-          "hi": 52,
-          "lo": 48,
-          "precip": 98,
+          "hi": 55,
+          "lo": 50,
+          "precip": 96,
           "code": 61,
           "condition": "Light rain",
           "category": "rain",
-          "wind_mph": 9
+          "wind_mph": 8
         },
         {
           "date": "2026-11-26",
           "dow": "Thu",
-          "hi": 53,
-          "lo": 44,
+          "hi": 55,
+          "lo": 45,
           "precip": 100,
-          "code": 81,
-          "condition": "Rain showers",
+          "code": 63,
+          "condition": "Rain",
           "category": "rain",
-          "wind_mph": 8
+          "wind_mph": 14
+        },
+        {
+          "date": "2026-11-27",
+          "dow": "Fri",
+          "hi": 46,
+          "lo": 43,
+          "precip": 94,
+          "code": 53,
+          "condition": "Drizzle",
+          "category": "rain",
+          "wind_mph": 4
         }
       ],
       "utc_offset_seconds": -28800
@@ -86,35 +188,35 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-11-24",
-          "dow": "Tue",
-          "hi": 51,
-          "lo": 35,
-          "precip": 5,
-          "code": 45,
-          "condition": "Fog",
-          "category": "cloud",
-          "wind_mph": 10
-        },
-        {
           "date": "2026-11-25",
           "dow": "Wed",
-          "hi": 50,
-          "lo": 40,
-          "precip": 11,
-          "code": 51,
-          "condition": "Light drizzle",
-          "category": "rain",
-          "wind_mph": 8
+          "hi": 53,
+          "lo": 38,
+          "precip": 15,
+          "code": 3,
+          "condition": "Overcast",
+          "category": "cloud",
+          "wind_mph": 9
         },
         {
           "date": "2026-11-26",
           "dow": "Thu",
+          "hi": 48,
+          "lo": 43,
+          "precip": 100,
+          "code": 53,
+          "condition": "Drizzle",
+          "category": "rain",
+          "wind_mph": 8
+        },
+        {
+          "date": "2026-11-27",
+          "dow": "Fri",
           "hi": 44,
-          "lo": 35,
-          "precip": 99,
-          "code": 63,
-          "condition": "Rain",
+          "lo": 38,
+          "precip": 92,
+          "code": 55,
+          "condition": "Heavy drizzle",
           "category": "rain",
           "wind_mph": 8
         }
@@ -130,37 +232,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-11-24",
-          "dow": "Tue",
-          "hi": 58,
-          "lo": 38,
-          "precip": 1,
-          "code": 3,
-          "condition": "Overcast",
-          "category": "cloud",
-          "wind_mph": 17
-        },
-        {
           "date": "2026-11-25",
           "dow": "Wed",
-          "hi": 59,
-          "lo": 45,
-          "precip": 7,
+          "hi": 60,
+          "lo": 48,
+          "precip": 14,
           "code": 3,
           "condition": "Overcast",
           "category": "cloud",
-          "wind_mph": 16
+          "wind_mph": 20
         },
         {
           "date": "2026-11-26",
           "dow": "Thu",
-          "hi": 51,
-          "lo": 44,
-          "precip": 77,
-          "code": 55,
-          "condition": "Heavy drizzle",
+          "hi": 63,
+          "lo": 51,
+          "precip": 65,
+          "code": 51,
+          "condition": "Light drizzle",
           "category": "rain",
-          "wind_mph": 11
+          "wind_mph": 21
+        },
+        {
+          "date": "2026-11-27",
+          "dow": "Fri",
+          "hi": 53,
+          "lo": 43,
+          "precip": 98,
+          "code": 63,
+          "condition": "Rain",
+          "category": "rain",
+          "wind_mph": 8
         }
       ],
       "utc_offset_seconds": -25200
@@ -174,37 +276,37 @@
       "ok": true,
       "days": [
         {
-          "date": "2026-11-24",
-          "dow": "Tue",
-          "hi": 55,
-          "lo": 41,
-          "precip": 2,
-          "code": 45,
-          "condition": "Fog",
-          "category": "cloud",
-          "wind_mph": 13
-        },
-        {
           "date": "2026-11-25",
           "dow": "Wed",
-          "hi": 55,
-          "lo": 41,
-          "precip": 54,
+          "hi": 54,
+          "lo": 42,
+          "precip": 74,
           "code": 63,
           "condition": "Rain",
           "category": "rain",
-          "wind_mph": 11
+          "wind_mph": 13
         },
         {
           "date": "2026-11-26",
           "dow": "Thu",
           "hi": 51,
           "lo": 34,
-          "precip": 98,
-          "code": 85,
-          "condition": "Snow showers",
+          "precip": 88,
+          "code": 73,
+          "condition": "Snow",
           "category": "snow",
-          "wind_mph": 12
+          "wind_mph": 16
+        },
+        {
+          "date": "2026-11-27",
+          "dow": "Fri",
+          "hi": 41,
+          "lo": 31,
+          "precip": 64,
+          "code": 73,
+          "condition": "Snow",
+          "category": "snow",
+          "wind_mph": 17
         }
       ],
       "utc_offset_seconds": -18000
